@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khanak Sethi — UI/UX &amp; Product Designer</title>
+<meta name="description" content="Portfolio of Khanak Sethi, a UI/UX and product designer.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,500italic&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="name">Khanak Sethi</div>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <h1>Khanak<br>Sethi</h1>
+    <p class="tagline">Fourth-year design student who starts with people, not pixels.</p>
+    <p class="intro">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
+    <a class="cta" href="#work">View my work</a>
+  </section>
+
+  <section class="work wrap" id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <span class="count">6 projects</span>
+    </div>
+
+    <div class="work-list">
+      <a class="project-row" data-preview="p-sethi" href="projects/sethi-jewellers.html">
+        <div class="project-main">
+          <div class="project-title">Sethi Jewellers</div>
+          <div class="project-tagline">Luxury jewellery shopping, reimagined for trust and desire.</div>
+        </div>
+        <span class="project-tag">UI/UX</span>
+      </a>
+
+      <a class="project-row" data-preview="p-shoes" href="#">
+        <div class="project-main">
+          <div class="project-title">Walk In My Shoes</div>
+          <div class="project-tagline">An empathy-driven app that lets you live someone else's day.</div>
+        </div>
+        <span class="project-tag">UI/UX</span>
+      </a>
+
+      <a class="project-row" data-preview="p-trigma" href="#">
+        <div class="project-main">
+          <div class="project-title">Taira, for Trigma AI</div>
+          <div class="project-tagline">A conversational AI that qualifies leads instead of losing them to a form.</div>
+        </div>
+        <span class="project-tag">UI/UX</span>
+      </a>
+
+      <a class="project-row" data-preview="p-nighthaven" href="#">
+        <div class="project-main">
+          <div class="project-title">Nighthaven</div>
+          <div class="project-tagline">A sleeping bag designed for warmth, safety, and dignity.</div>
+        </div>
+        <span class="project-tag">Product Design</span>
+      </a>
+
+      <a class="project-row" data-preview="p-cider" href="#">
+        <div class="project-main">
+          <div class="project-title">Fruit Cider</div>
+          <div class="project-tagline">A 3D carousel that puts flavor front and center.</div>
+        </div>
+        <span class="project-tag">UI/UX</span>
+      </a>
+
+      <a class="project-row" data-preview="p-pecmate" href="#">
+        <div class="project-main">
+          <div class="project-title">PECmate</div>
+          <div class="project-tagline">One verified campus, one trusted ride.</div>
+        </div>
+        <span class="project-tag">UI/UX</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="about wrap" id="about">
+    <div>
+      <div class="section-head"><h2>About</h2></div>
+    </div>
+    <p>I'm <strong>Khanak</strong>, a fourth-year design student who likes to understand a problem properly before opening Figma. Most of my projects start with research — personas, journey maps, sometimes just talking to people — because the interface only works if the thinking underneath it does too.</p>
+  </section>
+
+  <section class="contact wrap" id="contact">
+    <h2>Let's talk about your next project.</h2>
+    <div class="contact-links">
+      <a href="mailto:khanaksethi424@gmail.com">Email me</a>
+      <a href="https://www.linkedin.com/in/khanak-sethi-aa773a310/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>Khanak Sethi</span>
+  <span>Built with care, 2026</span>
+</footer>
+
+<div class="preview" id="preview"><span></span></div>
+
+<script>
+  // ============================================
+  // Floating preview that follows the cursor.
+  // Only runs on devices that actually support hover
+  // (skips touch/mobile automatically).
+  // ============================================
+  const preview = document.getElementById('preview');
+  const rows = document.querySelectorAll('.project-row');
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+  if (supportsHover) {
+    rows.forEach(row => {
+      row.addEventListener('mouseenter', () => {
+        preview.className = 'preview visible ' + row.dataset.preview;
+        preview.querySelector('span').textContent = row.querySelector('.project-title').textContent;
+      });
+      row.addEventListener('mouseleave', () => {
+        preview.classList.remove('visible');
+      });
+      row.addEventListener('mousemove', (e) => {
+        preview.style.top = e.clientY + 'px';
+        preview.style.left = e.clientX + 'px';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
