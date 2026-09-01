@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taira, for Trigma AI — Khanak Sethi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="name" href="../index.html">Khanak Sethi</a>
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">&larr; All work</a>
+
+    <div class="cs-header">
+      <span class="cs-tag">UI/UX &middot; 4-month internship</span>
+      <h1>Taira, for Trigma AI</h1>
+      <p class="one-liner">A conversational AI assistant for Trigma's website that qualifies leads and books meetings through natural conversation, designed for three different people across the funnel — not just the visitor.</p>
+    </div>
+
+    <div class="cs-meta">
+      <div><span class="label">Role</span><span class="value">UI/UX Design Intern</span></div>
+      <div><span class="label">Duration</span><span class="value">4 months</span></div>
+      <div><span class="label">Tools</span><span class="value">Figma</span></div>
+      <div><span class="label">Team</span><span class="value">Trigma's design &amp; marketing team</span></div>
+    </div>
+
+    <!-- HERO IMAGE — replace with your exported final UI shot -->
+    <div class="cs-hero-image" style="background:linear-gradient(160deg,#1a1315,#8f2222);"></div>
+  </div>
+
+  <div class="cs-section">
+    <h2>Overview</h2>
+    <p>Taira is Trigma's AI-powered assistant, built to replace generic chatbots and high-friction contact forms with a natural, intent-aware conversation — offering visitors a choice between an AI video avatar or text chat, then qualifying them and booking meetings without ever feeling like a form.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2>The problem</h2>
+    <p>B2B visitors landing on Trigma's site had no fast, low-friction way to evaluate fit. Contact forms ask for information before offering any value, and generic chatbots give scripted, irrelevant answers that don't adapt to where a visitor actually is in the buying journey.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2>Process</h2>
+
+    <h3>Discover &amp; Empathize</h3>
+    <p class="muted">Rather than researching a single user, I mapped three personas spanning the entire funnel — <strong style="color:var(--ink)">Arjun</strong>, a Senior PM evaluating fit and wanting instant, relevant answers with zero sales pressure; <strong style="color:var(--ink)">Manisha</strong>, an SDR who receives the AI-qualified lead and needs rich context to avoid cold, low-quality handoffs; and <strong style="color:var(--ink)">Neha</strong>, a RevOps Manager who needs clean, automatically-synced data across CRM, calendar, and communication tools. That reframed the brief from "design a chatbot" into "design a system that serves three different people across a pipeline."</p>
+
+    <h3>Define</h3>
+    <p class="muted">Distilling across all three personas, the core needs were: instant intelligence, natural rather than robotic conversation, low-friction and gradual information capture, multi-language support, and clean structured handoff data for the humans downstream.</p>
+
+    <h3>Ideate</h3>
+    <p class="muted">I mapped two full conversation flows. The <strong style="color:var(--ink)">text chat flow</strong> analyzes intent — low, medium, or high — and branches the conversation accordingly, only "soft-asking" for an email once enough value has already been exchanged, with graceful retry logic if declined. The <strong style="color:var(--ink)">AI avatar flow</strong> adds an explicit recording-consent step, natural Q&amp;A to gather context like location, industry, and requirement, and a human-handoff path that only triggers during working hours, with its own separate consent step.</p>
+
+    <h3>Prototype</h3>
+    <p class="muted">Before any screens, I built a small design system — a color palette anchored on Trigma's signature red, a Poppins type scale from Display down to Small, button states, and reusable chat bubble components — then moved through grayscale wireframes to lock structure, before final high-fidelity screens matching Trigma's existing dark, premium brand identity.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2>Solution</h2>
+    <p>A widget offering a choice between video chat with the AI avatar "Taira" or text chat. The assistant asks intent-clarifying questions, offers quick-reply chips for common paths, captures contact info progressively rather than upfront, and closes with direct meeting-slot selection and automatic calendar confirmation.</p>
+  </div>
+
+  <!-- FINAL SCREENS GALLERY — replace with exported PNGs -->
+  <div class="cs-gallery">
+    <div class="shot wide" style="background:linear-gradient(135deg,#1a1315,#8f2222);"></div>
+    <div class="shot" style="background:linear-gradient(135deg,#241819,#b83030);"></div>
+    <div class="shot" style="background:linear-gradient(135deg,#14100f,#5c1616);"></div>
+  </div>
+
+  <div class="cs-section">
+    <h2>Outcome &amp; reflection</h2>
+    <p>The design wasn't deployed live by the end of the internship, but both conversation flows — text chat and AI avatar — were validated with the Trigma team, confirming the intent-based branching logic and progressive information capture approach ahead of handoff to development.</p>
+  </div>
+
+  <a class="cs-nextproject" href="nighthaven.html">
+    <div>
+      <div class="label">Next project</div>
+      <div class="title">Nighthaven</div>
+    </div>
+    <span>&rarr;</span>
+  </a>
+</main>
+
+<footer class="site-footer">
+  <span>Khanak Sethi</span>
+  <span>Built with care, 2026</span>
+</footer>
+
+</body>
+</html>
