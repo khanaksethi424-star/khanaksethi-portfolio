@@ -143,10 +143,10 @@ a:focus-visible, button:focus-visible{
 }
 .preview.p-sethi{      background:linear-gradient(160deg,#1c1a17,#8a6a1e); }
 .preview.p-shoes{      background:linear-gradient(160deg,#3a1f3d,#7a4a55); }
-.preview.p-trigma{     background:linear-gradient(160deg,#1a1315,#8f2222); }
+.preview.p-trigma{     background-image:url('../images/trigma-hero.png'); background-color:#1a1315; }
 .preview.p-nighthaven{ background:linear-gradient(160deg,#0e1b2a,#3c5a72); }
 .preview.p-cider{      background:linear-gradient(160deg,#e8b7a0,#c04c3c); }
-.preview.p-pecmate{    background:linear-gradient(160deg,#173a1f,#3f8f4f); }
+.preview.p-pecmate{    background-image:url('../images/pecmate-hero.png'); background-size:contain; background-color:#f2efe9; }
 
 /* ============================================
    ABOUT STRIP + CONTACT (homepage)
