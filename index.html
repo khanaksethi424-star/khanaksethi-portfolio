@@ -40,52 +40,64 @@
     </div>
 
     <div class="work-list">
-      <a class="project-row" data-preview="p-sethi" href="projects/sethi-jewellers.html">
-        <div class="project-main">
+      <a class="project-spread" href="projects/sethi-jewellers.html">
+        <div class="spread-media" style="background:linear-gradient(160deg,#1c1a17,#8a6a1e);"></div>
+        <div class="spread-info">
+          <span class="project-tag">UI/UX</span>
           <div class="project-title">Sethi Jewellers</div>
-          <div class="project-tagline">Luxury jewellery shopping, reimagined for trust and desire.</div>
+          <p class="project-tagline">Luxury jewellery shopping, reimagined for trust and desire.</p>
+          <span class="view-link">View project &rarr;</span>
         </div>
-        <span class="project-tag">UI/UX</span>
       </a>
 
-      <a class="project-row" data-preview="p-shoes" href="projects/walk-in-my-shoes.html">
-        <div class="project-main">
+      <a class="project-spread reverse" href="projects/walk-in-my-shoes.html">
+        <div class="spread-media" style="background:linear-gradient(160deg,#3a1f3d,#7a4a55);"></div>
+        <div class="spread-info">
+          <span class="project-tag">UI/UX</span>
           <div class="project-title">Walk In My Shoes</div>
-          <div class="project-tagline">An empathy-driven app that lets you live someone else's day.</div>
+          <p class="project-tagline">An empathy-driven app that lets you live someone else's day.</p>
+          <span class="view-link">View project &rarr;</span>
         </div>
-        <span class="project-tag">UI/UX</span>
       </a>
 
-      <a class="project-row" data-preview="p-trigma" href="projects/taira-trigma.html">
-        <div class="project-main">
+      <a class="project-spread" href="projects/taira-trigma.html">
+        <div class="spread-media" style="background-image:url('images/trigma-hero.png');"></div>
+        <div class="spread-info">
+          <span class="project-tag">UI/UX</span>
           <div class="project-title">Taira, for Trigma AI</div>
-          <div class="project-tagline">A conversational AI that qualifies leads instead of losing them to a form.</div>
+          <p class="project-tagline">A conversational AI that qualifies leads instead of losing them to a form.</p>
+          <span class="view-link">View project &rarr;</span>
         </div>
-        <span class="project-tag">UI/UX</span>
       </a>
 
-      <a class="project-row" data-preview="p-nighthaven" href="projects/nighthaven.html">
-        <div class="project-main">
+      <a class="project-spread reverse" href="projects/nighthaven.html">
+        <div class="spread-media" style="background:linear-gradient(160deg,#0e1b2a,#3c5a72);"></div>
+        <div class="spread-info">
+          <span class="project-tag">Product Design</span>
           <div class="project-title">Nighthaven</div>
-          <div class="project-tagline">A sleeping bag designed for warmth, safety, and dignity.</div>
+          <p class="project-tagline">A sleeping bag designed for warmth, safety, and dignity.</p>
+          <span class="view-link">View project &rarr;</span>
         </div>
-        <span class="project-tag">Product Design</span>
       </a>
 
-      <a class="project-row" data-preview="p-cider" href="projects/fruit-cider.html">
-        <div class="project-main">
+      <a class="project-spread" href="projects/fruit-cider.html">
+        <div class="spread-media" style="background:linear-gradient(160deg,#e8b7a0,#c04c3c);"></div>
+        <div class="spread-info">
+          <span class="project-tag">UI/UX</span>
           <div class="project-title">Fruit Cider</div>
-          <div class="project-tagline">A 3D carousel that puts flavor front and center.</div>
+          <p class="project-tagline">A 3D carousel that puts flavor front and center.</p>
+          <span class="view-link">View project &rarr;</span>
         </div>
-        <span class="project-tag">UI/UX</span>
       </a>
 
-      <a class="project-row" data-preview="p-pecmate" href="projects/pecmate.html">
-        <div class="project-main">
+      <a class="project-spread reverse" href="projects/pecmate.html">
+        <div class="spread-media" style="background-image:url('images/pecmate-hero.png'); background-size:contain; background-color:#f2efe9;"></div>
+        <div class="spread-info">
+          <span class="project-tag">UI/UX</span>
           <div class="project-title">PECmate</div>
-          <div class="project-tagline">One verified campus, one trusted ride.</div>
+          <p class="project-tagline">One verified campus, one trusted ride.</p>
+          <span class="view-link">View project &rarr;</span>
         </div>
-        <span class="project-tag">UI/UX</span>
       </a>
     </div>
   </section>
@@ -111,32 +123,29 @@
   <span>Built with care, 2026</span>
 </footer>
 
-<div class="preview" id="preview"><span></span></div>
 
 <script>
   // ============================================
-  // Floating preview that follows the cursor.
-  // Only runs on devices that actually support hover
-  // (skips touch/mobile automatically).
+  // Scroll-reveal: each project spread fades and
+  // slides up into place as it enters the viewport.
+  // Falls back to "just show everything" if the
+  // browser doesn't support IntersectionObserver.
   // ============================================
-  const preview = document.getElementById('preview');
-  const rows = document.querySelectorAll('.project-row');
-  const supportsHover = window.matchMedia('(hover: hover)').matches;
+  const spreads = document.querySelectorAll('.project-spread');
 
-  if (supportsHover) {
-    rows.forEach(row => {
-      row.addEventListener('mouseenter', () => {
-        preview.className = 'preview visible ' + row.dataset.preview;
-        preview.querySelector('span').textContent = row.querySelector('.project-title').textContent;
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target); // only animate once
+        }
       });
-      row.addEventListener('mouseleave', () => {
-        preview.classList.remove('visible');
-      });
-      row.addEventListener('mousemove', (e) => {
-        preview.style.top = e.clientY + 'px';
-        preview.style.left = e.clientX + 'px';
-      });
-    });
+    }, { threshold: 0.15 });
+
+    spreads.forEach(el => observer.observe(el));
+  } else {
+    spreads.forEach(el => el.classList.add('in-view'));
   }
 </script>
 
