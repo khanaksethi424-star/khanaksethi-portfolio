@@ -33,6 +33,24 @@
     <a class="cta" href="#work">View my work</a>
   </section>
 
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item" style="background-image:url('images/trigma-hero.png');"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#1c1a17,#8a6a1e);"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#3a1f3d,#7a4a55);"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#0e1b2a,#3c5a72);"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#e8b7a0,#c04c3c);"></div>
+      <div class="marquee-item" style="background-image:url('images/pecmate-hero.png'); background-size:contain; background-color:#f2efe9;"></div>
+      <!-- duplicate set — makes the loop seamless -->
+      <div class="marquee-item" style="background-image:url('images/trigma-hero.png');"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#1c1a17,#8a6a1e);"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#3a1f3d,#7a4a55);"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#0e1b2a,#3c5a72);"></div>
+      <div class="marquee-item" style="background:linear-gradient(160deg,#e8b7a0,#c04c3c);"></div>
+      <div class="marquee-item" style="background-image:url('images/pecmate-hero.png'); background-size:contain; background-color:#f2efe9;"></div>
+    </div>
+  </section>
+
   <section class="work wrap" id="work">
     <div class="section-head">
       <h2>Selected work</h2>
@@ -123,6 +141,7 @@
   <span>Built with care, 2026</span>
 </footer>
 
+<div class="cursor-tag" id="cursorTag">View project</div>
 
 <script>
   // ============================================
@@ -146,6 +165,25 @@
     spreads.forEach(el => observer.observe(el));
   } else {
     spreads.forEach(el => el.classList.add('in-view'));
+  }
+
+  // ============================================
+  // Cursor tag: a small "View project" pill that
+  // follows the mouse while hovering a spread.
+  // Only runs on devices that support real hover.
+  // ============================================
+  const cursorTag = document.getElementById('cursorTag');
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+  if (supportsHover) {
+    spreads.forEach(el => {
+      el.addEventListener('mouseenter', () => cursorTag.classList.add('visible'));
+      el.addEventListener('mouseleave', () => cursorTag.classList.remove('visible'));
+      el.addEventListener('mousemove', (e) => {
+        cursorTag.style.top = e.clientY + 'px';
+        cursorTag.style.left = e.clientX + 'px';
+      });
+    });
   }
 </script>
 
