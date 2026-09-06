@@ -70,9 +70,13 @@ a:focus-visible, button:focus-visible{
 .nav a:hover{ color:var(--ink); }
 
 /* ============================================
-   HERO (homepage)
+   HERO — greeting, status pill, scroll cue
    ============================================ */
-.hero{ padding:clamp(64px,12vw,120px) 0 clamp(48px,8vw,80px); }
+.hero{ padding:clamp(56px,10vw,100px) 0 clamp(56px,9vw,90px); position:relative; }
+.hero-greeting{
+  font-family:var(--sans); font-size:1rem; color:var(--ink-soft);
+  margin:0 0 14px; font-weight:500;
+}
 .hero h1{
   font-family:var(--serif); font-weight:500;
   font-size:clamp(3rem, 8vw, 6.2rem);
@@ -83,6 +87,8 @@ a:focus-visible, button:focus-visible{
   max-width:34ch; margin:0 0 22px; font-weight:500;
 }
 .hero .intro{ max-width:56ch; color:var(--ink-soft); font-size:1.05rem; margin:0 0 32px; }
+
+.hero-actions{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
 .hero .cta{
   display:inline-flex; align-items:center; gap:10px;
   background:var(--ink); color:var(--paper);
@@ -91,6 +97,75 @@ a:focus-visible, button:focus-visible{
   transition:background 0.15s ease;
 }
 .hero .cta:hover{ background:var(--accent); }
+
+.status-pill{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:0.88rem; color:var(--ink-soft);
+  border:1px solid var(--line); padding:9px 16px; border-radius:20px;
+}
+.status-dot{
+  width:7px; height:7px; border-radius:50%; background:#3fa855;
+  box-shadow:0 0 0 3px rgba(63,168,85,0.18);
+  animation:pulse-dot 2.4s ease-in-out infinite;
+}
+@keyframes pulse-dot{
+  0%, 100%{ opacity:1; } 50%{ opacity:0.45; }
+}
+
+.scroll-cue{
+  background:none; border:none; cursor:pointer;
+  margin-top:56px; padding:8px;
+  display:flex; align-items:center; justify-content:center;
+}
+.scroll-cue span{
+  display:block; width:1px; height:34px;
+  background:var(--ink-soft);
+  position:relative;
+  animation:scroll-cue-move 1.8s ease-in-out infinite;
+}
+@keyframes scroll-cue-move{
+  0%{ transform:scaleY(0.3); transform-origin:top; opacity:0.4; }
+  50%{ transform:scaleY(1); transform-origin:top; opacity:1; }
+  51%{ transform-origin:bottom; }
+  100%{ transform:scaleY(0.3); transform-origin:bottom; opacity:0.4; }
+}
+
+/* Load-in animation for hero elements (plays once, on page load) */
+.reveal-load{
+  opacity:0; transform:translateY(14px);
+  animation:reveal-load-in 0.7s ease forwards;
+}
+@keyframes reveal-load-in{
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* Generic scroll-reveal for non-hero sections */
+.reveal{
+  opacity:0; transform:translateY(24px);
+  transition:opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in-view{ opacity:1; transform:translateY(0); }
+
+/* ============================================
+   STATS STRIP
+   ============================================ */
+.stats{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
+  padding:36px 0 40px;
+  border-top:1px solid var(--line);
+}
+.stat-number{
+  font-family:var(--serif); font-weight:500; color:var(--accent);
+  font-size:clamp(2.2rem, 5vw, 3.2rem); line-height:1;
+}
+.stat-label{
+  color:var(--ink-soft); font-size:0.86rem; margin-top:8px; max-width:16ch;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .status-dot, .scroll-cue span{ animation:none; }
+  .reveal-load{ opacity:1; transform:none; animation:none; }
+}
 
 /* ============================================
    SECTION HEADINGS (shared)
@@ -309,6 +384,7 @@ footer.site-footer{
    ============================================ */
 @media (max-width:720px){
   .nav ul{ gap:16px; }
+  .stats{ grid-template-columns:1fr 1fr; }
   .project-spread, .project-spread.reverse{ flex-direction:column; gap:20px; padding:36px 4px; }
   .spread-media{ flex:none; width:100%; aspect-ratio:16/10; }
   .about .wrap{ grid-template-columns:1fr; }

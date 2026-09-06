@@ -27,10 +27,38 @@
 
 <main>
   <section class="hero wrap">
-    <h1>Khanak<br>Sethi</h1>
-    <p class="tagline">Fourth-year design student who starts with people, not pixels.</p>
-    <p class="intro">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
-    <a class="cta" href="#work">View my work</a>
+    <p class="hero-greeting reveal-load">👋 Hey, I'm Khanak</p>
+    <h1 class="reveal-load" style="animation-delay:0.08s">Khanak<br>Sethi</h1>
+    <p class="tagline reveal-load" style="animation-delay:0.16s">Fourth-year design student who starts with people, not pixels.</p>
+    <p class="intro reveal-load" style="animation-delay:0.24s">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
+
+    <div class="hero-actions reveal-load" style="animation-delay:0.32s">
+      <a class="cta" href="#work">View my work</a>
+      <span class="status-pill"><span class="status-dot"></span> Open to internship opportunities</span>
+    </div>
+
+    <button class="scroll-cue" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to work">
+      <span></span>
+    </button>
+  </section>
+
+  <section class="stats wrap reveal" id="stats">
+    <div class="stat">
+      <div class="stat-number" data-target="6">0</div>
+      <div class="stat-label">Projects designed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number" data-target="4">0</div>
+      <div class="stat-label">Months, industry internship</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number" data-target="3">0</div>
+      <div class="stat-label">Personas mapped, on average</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number" data-suffix="th" data-target="4">0</div>
+      <div class="stat-label">Year design student</div>
+    </div>
   </section>
 
   <section class="marquee-section">
@@ -120,14 +148,14 @@
     </div>
   </section>
 
-  <section class="about wrap" id="about">
+  <section class="about wrap reveal" id="about">
     <div>
       <div class="section-head"><h2>About</h2></div>
     </div>
     <p>I'm <strong>Khanak</strong>, a fourth-year design student who likes to understand a problem properly before opening Figma. Most of my projects start with research — personas, journey maps, sometimes just talking to people — because the interface only works if the thinking underneath it does too.</p>
   </section>
 
-  <section class="contact wrap" id="contact">
+  <section class="contact wrap reveal" id="contact">
     <h2>Let's talk about your next project.</h2>
     <div class="contact-links">
       <a href="mailto:khanaksethi424@gmail.com">Email me</a>
@@ -137,40 +165,76 @@
 </main>
 
 <footer class="site-footer">
-  <span>Khanak Sethi</span>
-  <span>Built with care, 2026</span>
+  <span>Khanak Sethi — made with care and a lot of tab-switching, 2026</span>
+  <span id="liveClock">—</span>
 </footer>
 
 <div class="cursor-tag" id="cursorTag">View project</div>
 
 <script>
   // ============================================
-  // Scroll-reveal: each project spread fades and
-  // slides up into place as it enters the viewport.
-  // Falls back to "just show everything" if the
-  // browser doesn't support IntersectionObserver.
+  // Scroll-reveal: project spreads AND general
+  // sections (.reveal) fade/slide in as they enter
+  // the viewport.
   // ============================================
   const spreads = document.querySelectorAll('.project-spread');
+  const revealEls = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
-          observer.unobserve(entry.target); // only animate once
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.15 });
 
     spreads.forEach(el => observer.observe(el));
+    revealEls.forEach(el => observer.observe(el));
   } else {
     spreads.forEach(el => el.classList.add('in-view'));
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }
+
+  // ============================================
+  // Count-up stats: numbers animate from 0 to their
+  // target once the stats strip scrolls into view.
+  // ============================================
+  const statNumbers = document.querySelectorAll('.stat-number');
+
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 900;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  if ('IntersectionObserver' in window && statNumbers.length) {
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statNumbers.forEach(el => statObserver.observe(el));
+  } else {
+    statNumbers.forEach(el => { el.textContent = el.dataset.target + (el.dataset.suffix || ''); });
   }
 
   // ============================================
   // Cursor tag: a small "View project" pill that
   // follows the mouse while hovering a spread.
-  // Only runs on devices that support real hover.
   // ============================================
   const cursorTag = document.getElementById('cursorTag');
   const supportsHover = window.matchMedia('(hover: hover)').matches;
@@ -185,6 +249,20 @@
       });
     });
   }
+
+  // ============================================
+  // Live clock — small personality touch in the
+  // footer, shows the visitor's own local time.
+  // ============================================
+  const clockEl = document.getElementById('liveClock');
+  function updateClock() {
+    if (!clockEl) return;
+    const now = new Date();
+    const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    clockEl.textContent = `It's ${time} where you are`;
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
 </script>
 
 </body>
