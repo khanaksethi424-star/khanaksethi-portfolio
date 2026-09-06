@@ -27,14 +27,13 @@
 
 <main>
   <section class="hero wrap">
-    <p class="hero-greeting reveal-load">👋 Hey, I'm Khanak</p>
-    <h1 class="reveal-load" style="animation-delay:0.08s">Khanak<br>Sethi</h1>
-    <p class="tagline reveal-load" style="animation-delay:0.16s">Fourth-year design student who starts with people, not pixels.</p>
-    <p class="intro reveal-load" style="animation-delay:0.24s">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
+    <h1 class="reveal-load">Khanak<br>Sethi</h1>
+    <p class="tagline reveal-load" style="animation-delay:0.08s">Fourth-year design student who starts with people, not pixels.</p>
+    <p class="intro reveal-load" style="animation-delay:0.16s">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
 
-    <div class="hero-actions reveal-load" style="animation-delay:0.32s">
+    <div class="hero-actions reveal-load" style="animation-delay:0.24s">
       <a class="cta" href="#work">View my work</a>
-      <span class="status-pill"><span class="status-dot"></span> Open to internship opportunities</span>
+      <span class="status-pill"><span class="status-dot"></span> Open to work</span>
     </div>
 
     <button class="scroll-cue" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to work">
@@ -61,21 +60,38 @@
     </div>
   </section>
 
-  <section class="marquee-section">
-    <div class="marquee-track">
-      <div class="marquee-item" style="background-image:url('images/thumbs/sethi-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/trigma-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/shoes-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/nighthaven-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/cider-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/pecmate-marquee.jpg');"></div>
-      <!-- duplicate set — makes the loop seamless -->
-      <div class="marquee-item" style="background-image:url('images/thumbs/sethi-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/trigma-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/shoes-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/nighthaven-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/cider-marquee.jpg');"></div>
-      <div class="marquee-item" style="background-image:url('images/thumbs/pecmate-marquee.jpg');"></div>
+  <section class="drag-section" id="browse">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Browse the work</h2>
+        <span class="count">Drag to explore &rarr;</span>
+      </div>
+    </div>
+    <div class="drag-scroll" id="dragScroll">
+      <a class="drag-card" href="projects/sethi-jewellers.html">
+        <img src="images/thumbs/sethi-marquee.jpg" alt="Sethi Jewellers" draggable="false">
+        <div class="drag-card-label">Sethi Jewellers</div>
+      </a>
+      <a class="drag-card" href="projects/taira-trigma.html">
+        <img src="images/thumbs/trigma-marquee.jpg" alt="Taira, for Trigma AI" draggable="false">
+        <div class="drag-card-label">Taira, for Trigma AI</div>
+      </a>
+      <a class="drag-card" href="projects/walk-in-my-shoes.html">
+        <img src="images/thumbs/shoes-marquee.jpg" alt="Walk In My Shoes" draggable="false">
+        <div class="drag-card-label">Walk In My Shoes</div>
+      </a>
+      <a class="drag-card" href="projects/nighthaven.html">
+        <img src="images/thumbs/nighthaven-marquee.jpg" alt="Nighthaven" draggable="false">
+        <div class="drag-card-label">Nighthaven</div>
+      </a>
+      <a class="drag-card" href="projects/fruit-cider.html">
+        <img src="images/thumbs/cider-marquee.jpg" alt="Fruit Cider" draggable="false">
+        <div class="drag-card-label">Fruit Cider</div>
+      </a>
+      <a class="drag-card" href="projects/pecmate.html">
+        <img src="images/thumbs/pecmate-marquee.jpg" alt="PECmate" draggable="false">
+        <div class="drag-card-label">PECmate</div>
+      </a>
     </div>
   </section>
 
@@ -171,6 +187,12 @@
 
 <div class="cursor-tag" id="cursorTag">View project</div>
 
+<nav class="side-nav" id="sideNav">
+  <a href="#work" data-label="Work"><span></span></a>
+  <a href="#about" data-label="About"><span></span></a>
+  <a href="#contact" data-label="Contact"><span></span></a>
+</nav>
+
 <script>
   // ============================================
   // Scroll-reveal: project spreads AND general
@@ -263,6 +285,64 @@
   }
   updateClock();
   setInterval(updateClock, 30000);
+
+  // ============================================
+  // Drag-to-scroll for the project card carousel.
+  // Mouse users can grab and drag; touch devices
+  // already scroll natively, this just adds mouse
+  // support on desktop.
+  // ============================================
+  const dragScroll = document.getElementById('dragScroll');
+  if (dragScroll) {
+    let isDown = false, startX = 0, startScroll = 0, moved = 0;
+
+    dragScroll.addEventListener('mousedown', (e) => {
+      isDown = true; moved = 0;
+      startX = e.pageX;
+      startScroll = dragScroll.scrollLeft;
+      dragScroll.classList.add('dragging');
+    });
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+      dragScroll.classList.remove('dragging');
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const delta = e.pageX - startX;
+      moved = Math.abs(delta);
+      dragScroll.scrollLeft = startScroll - delta;
+    });
+    // Prevent the click-through to a project page if the user was
+    // actually dragging rather than clicking.
+    dragScroll.addEventListener('click', (e) => {
+      if (moved > 8) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+  }
+
+  // ============================================
+  // Side nav: highlights the section currently in
+  // view, click a dot to jump straight to it.
+  // ============================================
+  const sideNavLinks = document.querySelectorAll('.side-nav a');
+  const trackedSections = ['work', 'about', 'contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sideNavLinks.length) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const link = document.querySelector(`.side-nav a[href="#${entry.target.id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          sideNavLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    trackedSections.forEach(sec => navObserver.observe(sec));
+  }
 </script>
 
 </body>
