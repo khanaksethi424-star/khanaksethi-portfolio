@@ -27,6 +27,10 @@
 
 <main>
   <section class="hero wrap">
+    <div class="hero-kicker reveal-load" style="animation-delay:0s">
+      <span class="kicker-line"></span>
+      PRODUCT · UI/UX · HUMAN-CENTRED DESIGN
+    </div>
     <h1 class="reveal-load">Khanak<br>Sethi</h1>
     <p class="tagline reveal-load" style="animation-delay:0.08s">Fourth-year design student who starts with people, not pixels.</p>
     <p class="intro reveal-load" style="animation-delay:0.16s">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
@@ -40,38 +44,73 @@
       <span></span>
     </button>
   </section>
-  <section class="drag-section" id="browse">
+  <section class="marquee-section" id="browse" aria-label="Selected projects">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Browse the work</h2>
-        <span class="count">Drag to explore &rarr;</span>
+      <div class="section-head marquee-head">
+        <div>
+          <span class="eyebrow">A moving archive</span>
+          <h2>Browse the work</h2>
+        </div>
+        <span class="count">Selected projects <span class="count-arrow">↗</span></span>
       </div>
     </div>
-    <div class="drag-scroll" id="dragScroll">
-      <a class="drag-card" href="projects/sethi-jewellers.html">
-        <img src="images/thumbs/sethi-home-thumb.jpg" alt="Sethi Jewellers" draggable="false">
-        <div class="drag-card-label">Sethi Jewellers</div>
-      </a>
-      <a class="drag-card" href="projects/taira-trigma.html">
-        <img src="images/thumbs/trigma-home-thumb.jpg" alt="Taira, for Trigma AI" draggable="false">
-        <div class="drag-card-label">Taira, for Trigma AI</div>
-      </a>
-      <a class="drag-card" href="projects/walk-in-my-shoes.html">
-        <img src="images/thumbs/shoes-marquee.jpg" alt="Walk In My Shoes" draggable="false">
-        <div class="drag-card-label">Walk In My Shoes</div>
-      </a>
-      <a class="drag-card" href="projects/nighthaven.html">
-        <img src="images/thumbs/nighthaven-home-thumb.jpg" alt="Nighthaven" draggable="false">
-        <div class="drag-card-label">Nighthaven</div>
-      </a>
-      <a class="drag-card" href="projects/fruit-cider.html">
-        <img src="images/thumbs/cider-marquee.jpg" alt="Fruit Cider" draggable="false">
-        <div class="drag-card-label">Fruit Cider</div>
-      </a>
-      <a class="drag-card" href="projects/pecmate.html">
-        <img src="images/thumbs/pecmate-marquee.jpg" alt="PECmate" draggable="false">
-        <div class="drag-card-label">PECmate</div>
-      </a>
+
+    <div class="marquee-window">
+      <div class="marquee-track">
+        <div class="marquee-set">
+          <a class="marquee-card" href="projects/sethi-jewellers.html">
+            <img src="images/thumbs/sethi-home-thumb.jpg" alt="Sethi Jewellers" draggable="false">
+            <span class="marquee-card-label">Sethi Jewellers <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/taira-trigma.html">
+            <img src="images/thumbs/trigma-home-thumb.jpg" alt="Taira, for Trigma AI" draggable="false">
+            <span class="marquee-card-label">Taira, for Trigma AI <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/walk-in-my-shoes.html">
+            <img src="images/thumbs/shoes-marquee.jpg" alt="Walk In My Shoes" draggable="false">
+            <span class="marquee-card-label">Walk In My Shoes <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/nighthaven.html">
+            <img src="images/thumbs/nighthaven-home-thumb.jpg" alt="Nighthaven" draggable="false">
+            <span class="marquee-card-label">Nighthaven <small>Product Design</small></span>
+          </a>
+          <a class="marquee-card" href="projects/fruit-cider.html">
+            <img src="images/thumbs/cider-marquee.jpg" alt="Fruit Cider" draggable="false">
+            <span class="marquee-card-label">Fruit Cider <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/pecmate.html">
+            <img src="images/thumbs/pecmate-marquee.jpg" alt="PECmate" draggable="false">
+            <span class="marquee-card-label">PECmate <small>UI/UX</small></span>
+          </a>
+        </div>
+
+        <div class="marquee-set" aria-hidden="true">
+          <a class="marquee-card" href="projects/sethi-jewellers.html" tabindex="-1">
+            <img src="images/thumbs/sethi-home-thumb.jpg" alt="" draggable="false">
+            <span class="marquee-card-label">Sethi Jewellers <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/taira-trigma.html" tabindex="-1">
+            <img src="images/thumbs/trigma-home-thumb.jpg" alt="" draggable="false">
+            <span class="marquee-card-label">Taira, for Trigma AI <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/walk-in-my-shoes.html" tabindex="-1">
+            <img src="images/thumbs/shoes-marquee.jpg" alt="" draggable="false">
+            <span class="marquee-card-label">Walk In My Shoes <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/nighthaven.html" tabindex="-1">
+            <img src="images/thumbs/nighthaven-home-thumb.jpg" alt="" draggable="false">
+            <span class="marquee-card-label">Nighthaven <small>Product Design</small></span>
+          </a>
+          <a class="marquee-card" href="projects/fruit-cider.html" tabindex="-1">
+            <img src="images/thumbs/cider-marquee.jpg" alt="" draggable="false">
+            <span class="marquee-card-label">Fruit Cider <small>UI/UX</small></span>
+          </a>
+          <a class="marquee-card" href="projects/pecmate.html" tabindex="-1">
+            <img src="images/thumbs/pecmate-marquee.jpg" alt="" draggable="false">
+            <span class="marquee-card-label">PECmate <small>UI/UX</small></span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -82,7 +121,7 @@
     </div>
 
     <div class="work-list">
-      <a class="project-spread" href="projects/sethi-jewellers.html">
+      <a class="project-spread" href="projects/sethi-jewellers.html" data-preview="images/thumbs/sethi-home-thumb.jpg" data-project="Sethi Jewellers" data-type="UI/UX" data-description="Luxury jewellery shopping, reimagined for trust and desire.">
         <div class="spread-media" style="background-image:url('images/thumbs/sethi-home-thumb.jpg');"></div>
         <div class="spread-info">
           <span class="project-tag">UI/UX</span>
@@ -102,7 +141,7 @@
         </div>
       </a>
 
-      <a class="project-spread" href="projects/taira-trigma.html">
+      <a class="project-spread" href="projects/taira-trigma.html" data-preview="images/thumbs/trigma-home-thumb.jpg" data-project="Taira, for Trigma AI" data-type="UI/UX" data-description="Conversational AI that qualifies leads instead of losing them to a form.">
         <div class="spread-media" style="background-image:url('images/thumbs/trigma-home-thumb.jpg');"></div>
         <div class="spread-info">
           <span class="project-tag">UI/UX</span>
@@ -122,7 +161,7 @@
         </div>
       </a>
 
-      <a class="project-spread" href="projects/fruit-cider.html">
+      <a class="project-spread" href="projects/fruit-cider.html" data-preview="images/thumbs/cider-spread.jpg" data-project="Fruit Cider" data-type="UI/UX" data-description="A 3D carousel that puts flavor front and center.">
         <div class="spread-media" style="background-image:url('images/thumbs/cider-spread.jpg');"></div>
         <div class="spread-info">
           <span class="project-tag">UI/UX</span>
@@ -165,7 +204,17 @@
   <span id="liveClock">—</span>
 </footer>
 
-<div class="cursor-tag" id="cursorTag">View project</div>
+<div class="cursor-tag" id="cursorTag"><span>View project</span><b>↗</b></div>
+<div class="project-preview" id="projectPreview" aria-hidden="true">
+  <div class="preview-image" id="previewImage"></div>
+  <div class="preview-copy">
+    <div class="preview-topline"><span id="previewType">UI/UX</span><span>↗</span></div>
+    <strong id="previewTitle">Project</strong>
+    <p id="previewDescription">Explore the case study.</p>
+  </div>
+</div>
+<div class="cursor-orb" id="cursorOrb" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <nav class="side-nav" id="sideNav">
   <a href="#work" data-label="Work"><span></span></a>
@@ -200,20 +249,55 @@
   }
 
   // ============================================
-  // Cursor tag: a small "View project" pill that
-  // follows the mouse while hovering a spread.
+  // Premium hover preview — selected work reveals
+  // a floating project card near the pointer.
   // ============================================
   const cursorTag = document.getElementById('cursorTag');
+  const projectPreview = document.getElementById('projectPreview');
+  const previewImage = document.getElementById('previewImage');
+  const previewTitle = document.getElementById('previewTitle');
+  const previewType = document.getElementById('previewType');
+  const previewDescription = document.getElementById('previewDescription');
+  const cursorOrb = document.getElementById('cursorOrb');
   const supportsHover = window.matchMedia('(hover: hover)').matches;
 
   if (supportsHover) {
     spreads.forEach(el => {
-      el.addEventListener('mouseenter', () => cursorTag.classList.add('visible'));
-      el.addEventListener('mouseleave', () => cursorTag.classList.remove('visible'));
-      el.addEventListener('mousemove', (e) => {
-        cursorTag.style.top = e.clientY + 'px';
-        cursorTag.style.left = e.clientX + 'px';
+      el.addEventListener('mouseenter', () => {
+        cursorTag.classList.add('visible');
+        projectPreview.classList.add('visible');
+        projectPreview.setAttribute('aria-hidden', 'false');
+
+        previewImage.style.backgroundImage = `url("${el.dataset.preview}")`;
+        previewTitle.textContent = el.dataset.project || 'Project';
+        previewType.textContent = el.dataset.type || 'Design';
+        previewDescription.textContent = el.dataset.description || '';
       });
+
+      el.addEventListener('mouseleave', () => {
+        cursorTag.classList.remove('visible');
+        projectPreview.classList.remove('visible');
+        projectPreview.setAttribute('aria-hidden', 'true');
+      });
+
+      el.addEventListener('mousemove', (e) => {
+        cursorTag.style.top = `${e.clientY}px`;
+        cursorTag.style.left = `${e.clientX}px`;
+
+        const offsetX = 26;
+        const offsetY = 26;
+        const cardWidth = 300;
+        const cardHeight = 238;
+        const x = Math.min(e.clientX + offsetX, window.innerWidth - cardWidth - 18);
+        const y = Math.min(e.clientY + offsetY, window.innerHeight - cardHeight - 18);
+
+        projectPreview.style.left = `${Math.max(18, x)}px`;
+        projectPreview.style.top = `${Math.max(18, y)}px`;
+      });
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      cursorOrb.style.transform = `translate3d(${e.clientX - 7}px, ${e.clientY - 7}px, 0)`;
     });
   }
 
@@ -232,38 +316,18 @@
   setInterval(updateClock, 30000);
 
   // ============================================
-  // Drag-to-scroll for the project card carousel.
-  // Mouse users can grab and drag; touch devices
-  // already scroll natively, this just adds mouse
-  // support on desktop.
+  // Scroll progress — a quiet visual indicator
+  // that reacts continuously to the page.
   // ============================================
-  const dragScroll = document.getElementById('dragScroll');
-  if (dragScroll) {
-    let isDown = false, startX = 0, startScroll = 0, moved = 0;
-
-    dragScroll.addEventListener('mousedown', (e) => {
-      isDown = true; moved = 0;
-      startX = e.pageX;
-      startScroll = dragScroll.scrollLeft;
-      dragScroll.classList.add('dragging');
-    });
-    window.addEventListener('mouseup', () => {
-      isDown = false;
-      dragScroll.classList.remove('dragging');
-    });
-    window.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const delta = e.pageX - startX;
-      moved = Math.abs(delta);
-      dragScroll.scrollLeft = startScroll - delta;
-    });
-    // Prevent the click-through to a project page if the user was
-    // actually dragging rather than clicking.
-    dragScroll.addEventListener('click', (e) => {
-      if (moved > 8) { e.preventDefault(); e.stopPropagation(); }
-    }, true);
+  const scrollProgress = document.getElementById('scrollProgress');
+  function updateScrollProgress() {
+    if (!scrollProgress) return;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+    scrollProgress.style.transform = `scaleX(${progress})`;
   }
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
 
   // ============================================
   // Side nav: highlights the section currently in
