@@ -3,111 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taira, for Trigma AI — Khanak Sethi</title>
-
+<title>Taira — Trigma AI | Khanak Sethi</title>
+<meta name="description" content="Case study for Taira, a conversational AI experience designed for Trigma's website by Khanak Sethi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="taira-case">
+<div class="taira-grain" aria-hidden="true"></div>
+<div class="taira-progress" id="tairaProgress"></div>
 
-<header class="nav">
-  <div class="wrap">
-    <a class="name" href="../index.html">Khanak Sethi</a>
-    <ul>
-      <li><a href="../index.html#work">Work</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </div>
+<header class="taira-nav">
+  <a href="../index.html" class="taira-brand">Khanak Sethi</a>
+  <nav>
+    <a href="../index.html#work">WORK</a>
+    <a href="../index.html#about">ABOUT</a>
+    <a href="../index.html#contact">CONTACT</a>
+  </nav>
+  <span class="taira-nav-dot"></span>
 </header>
 
 <main>
-  <div class="wrap">
-    <a class="cs-back" href="../index.html#work">&larr; All work</a>
-
-    <div class="cs-header">
-      <span class="cs-tag">UI/UX &middot; 4-month internship</span>
-      <h1>Taira, for Trigma AI</h1>
-      <p class="one-liner">A conversational AI assistant for Trigma's website that qualifies leads and books meetings through natural conversation, designed for three different people across the funnel — not just the visitor.</p>
+  <section class="taira-hero">
+    <div class="taira-hero-copy">
+      <a href="../index.html#work" class="taira-back">← &nbsp;Back to projects</a>
+      <div class="taira-brandmark"><span class="trigma-mark">◉</span> Trigma<sup>™</sup></div>
+      <p class="taira-kicker">UI/UX DESIGN &nbsp;·&nbsp; INTERNSHIP PROJECT</p>
+      <h1>Taira<span>™</span></h1>
+      <h2>AI that talks.<br><em>So your team can.</em></h2>
+      <p class="taira-hero-desc">Designing a conversational AI experience that connects website visitors with the right Trigma team.</p>
+      <div class="taira-meta-row">
+        <div><small>ROLE</small><b>UI/UX Design Intern</b></div>
+        <div><small>DURATION</small><b>4 months</b></div>
+        <div><small>TOOLS</small><b>Figma</b></div>
+        <div><small>TEAM</small><b>Trigma Design &amp; Marketing</b></div>
+      </div>
     </div>
-
-    <div class="cs-meta">
-      <div><span class="label">Role</span><span class="value">UI/UX Design Intern</span></div>
-      <div><span class="label">Duration</span><span class="value">4 months</span></div>
-      <div><span class="label">Tools</span><span class="value">Figma</span></div>
-      <div><span class="label">Team</span><span class="value">Trigma's design &amp; marketing team</span></div>
+    <div class="taira-hero-visual">
+      <div class="taira-red-glow"></div>
+      <div class="taira-orbit"></div>
+      <div class="taira-hero-screen">
+        <img src="../images/taira/hero-video-chat.png" alt="Taira AI video chat interface">
+      </div>
+      <div class="taira-float-card">
+        <span class="online-dot"></span>
+        <img src="../images/trigma-persona-arjun.png" alt="Taira interface preview">
+        <div><b>Meet Taira</b><small>AI video assistant</small></div>
+      </div>
     </div>
+    <div class="taira-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+  </section>
 
-    <!-- Real screenshot -->
-    <div class="cs-hero-image" style="background-image:url('../images/trigma-hero.png');"></div>
-  </div>
-
-  <div class="cs-section">
-    <h2>Overview</h2>
-    <p>Taira is Trigma's AI-powered assistant, built to replace generic chatbots and high-friction contact forms with a natural, intent-aware conversation — offering visitors a choice between an AI video avatar or text chat, then qualifying them and booking meetings without ever feeling like a form.</p>
-  </div>
-
-  <div class="cs-section">
-    <h2>The problem</h2>
-    <p>B2B visitors landing on Trigma's site had no fast, low-friction way to evaluate fit. Contact forms ask for information before offering any value, and generic chatbots give scripted, irrelevant answers that don't adapt to where a visitor actually is in the buying journey.</p>
-  </div>
-
-  <div class="cs-section">
-    <h2>Process</h2>
-
-    <h3>Three people, one system</h3>
-    <p class="muted">Rather than researching a single user, I mapped three personas spanning the entire funnel — <strong style="color:var(--ink)">Arjun</strong>, a Senior PM evaluating fit and wanting instant, relevant answers with zero sales pressure; <strong style="color:var(--ink)">Manisha</strong>, an SDR who receives the AI-qualified lead and needs rich context to avoid cold, low-quality handoffs; and <strong style="color:var(--ink)">Neha</strong>, a RevOps Manager who needs clean, automatically-synced data across CRM, calendar, and communication tools. That reframed the brief from "design a chatbot" into "design a system that serves three different people across a pipeline."</p>
-  </div>
-
-  <div class="cs-persona-grid">
-    <img src="../images/trigma-persona-arjun.png" alt="Arjun Mehta persona — Senior Product Manager">
-    <img src="../images/trigma-persona-manisha.png" alt="Manisha Soni persona — Sales Development Representative">
-    <img src="../images/trigma-persona-neha.png" alt="Neha Iyer persona — Revenue Operations Manager">
-  </div>
-
-  <div class="cs-section">
-    <h3>What all three actually needed</h3>
-    <p class="muted">Distilling across all three personas, the core needs were: instant intelligence, natural rather than robotic conversation, low-friction and gradual information capture, multi-language support, and clean structured handoff data for the humans downstream.</p>
-
-    <h3>Two ways to have a conversation</h3>
-    <p class="muted">I mapped two full conversation flows. The <strong style="color:var(--ink)">text chat flow</strong> analyzes intent — low, medium, or high — and branches the conversation accordingly, only "soft-asking" for an email once enough value has already been exchanged, with graceful retry logic if declined. The <strong style="color:var(--ink)">AI avatar flow</strong> adds an explicit recording-consent step, natural Q&amp;A to gather context like location, industry, and requirement, and a human-handoff path that only triggers during working hours, with its own separate consent step.</p>
-
-    <h3>Building the design system first</h3>
-    <p class="muted">Before any screens, I built a small design system — a color palette anchored on Trigma's signature red, a Poppins type scale from Display down to Small, button states, and reusable chat bubble components — then moved through grayscale wireframes to lock structure, before final high-fidelity screens matching Trigma's existing dark, premium brand identity.</p>
-  </div>
-
-  <div class="cs-section">
-    <h2>Solution</h2>
-    <p>A widget offering a choice between video chat with the AI avatar "Taira" or text chat. The assistant asks intent-clarifying questions, offers quick-reply chips for common paths, captures contact info progressively rather than upfront, and closes with direct meeting-slot selection and automatic calendar confirmation.</p>
-  </div>
-
-  <!-- Real screenshots -->
-  <div class="cs-gallery">
-    <div class="shot wide" style="background-image:url('../images/trigma-1.png');"></div>
-    <div class="shot" style="background-image:url('../images/trigma-2.png');"></div>
-    <div class="shot" style="background-image:url('../images/trigma-3.png');"></div>
-  </div>
-
-  <div class="cs-section">
-    <h2>Outcome &amp; reflection</h2>
-    <p>The design wasn't deployed live by the end of the internship, but both conversation flows — text chat and AI avatar — were validated with the Trigma team, confirming the intent-based branching logic and progressive information capture approach ahead of handoff to development.</p>
-  </div>
-
-  <a class="cs-nextproject" href="nighthaven.html">
-    <div>
-      <div class="label">Next project</div>
-      <div class="title">Nighthaven</div>
+  <section class="taira-section taira-context">
+    <div class="taira-section-no">01</div>
+    <div class="taira-section-label">CONTEXT</div>
+    <div class="taira-context-grid">
+      <div>
+        <h3>What is Taira?</h3>
+        <p>Taira is Trigma's AI-powered conversational assistant, designed to give website visitors a more natural way to explore AI solutions, ask questions, share context and connect with the right team.</p>
+      </div>
+      <div class="taira-dual">
+        <div><span>01</span><b>Text chat</b><p>For quick questions and low-friction conversations.</p></div>
+        <div><span>02</span><b>Video chat</b><p>For a more human, guided experience with Taira.</p></div>
+      </div>
+      <blockquote>“The goal was to make conversations feel natural, helpful and human — not like a form.”<i></i></blockquote>
     </div>
-    <span>&rarr;</span>
-  </a>
+  </section>
+
+  <section class="taira-section taira-challenge">
+    <div class="taira-section-no">02</div>
+    <div class="taira-section-label">THE CHALLENGE</div>
+    <div class="taira-challenge-grid">
+      <h3>How might we turn a website visitor’s first interaction into a useful conversation — without making qualification feel like a form?</h3>
+      <div class="taira-tension">
+        <p class="mini-label">THE TENSION</p>
+        <div class="tension-card"><span>01</span><b>Visitor needs</b><ul><li>Quick answers</li><li>No pushy sales</li><li>Easy access</li></ul></div>
+        <div class="tension-card"><span>02</span><b>Sales needs</b><ul><li>Useful context</li><li>Qualified leads</li><li>Clear intent</li></ul></div>
+        <div class="tension-card"><span>03</span><b>Operations needs</b><ul><li>Structured information</li><li>Reliable handoff</li><li>Consistent process</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="taira-section taira-stakeholders">
+    <div class="taira-section-no">03</div>
+    <div class="taira-section-label">ONE EXPERIENCE · THREE STAKEHOLDERS</div>
+    <div class="taira-stake-intro"><p>Rather than designing around one user, I mapped the people who interact with the experience before, during and after a conversation.</p><div class="insight"><small>THE INSIGHT</small><strong>This wasn't just a chatbot problem.<br><em>It was a handoff problem.</em></strong></div></div>
+    <div class="persona-row">
+      <article><div class="persona-img"><img src="../images/trigma-persona-arjun.png" alt="Arjun persona"></div><span>ARJUN · WEBSITE VISITOR</span><h4>“I want answers without being pushed into a sales conversation.”</h4></article>
+      <article><div class="persona-img"><img src="../images/trigma-persona-manisha.png" alt="Manisha persona"></div><span>MANISHA · SDR / SALES</span><h4>“I need enough context to understand who I'm talking to.”</h4></article>
+      <article><div class="persona-img"><img src="../images/trigma-persona-neha.png" alt="Neha persona"></div><span>NEHA · REVOPS</span><h4>“I need that information captured consistently and passed into the next step.”</h4></article>
+    </div>
+  </section>
+
+  <section class="taira-section taira-architecture">
+    <div class="taira-section-no">04</div>
+    <div class="taira-section-label">CONVERSATION ARCHITECTURE</div>
+    <div class="taira-architecture-head"><h3>Two flows. One principle.</h3><p>Both journeys are designed around the same idea: <strong>progressive, contextual and human.</strong></p></div>
+    <div class="flow-strip"><div class="flow-title">TEXT CHAT FLOW</div><div class="flow-steps"><span>Visitor</span><i></i><span>Intent</span><i></i><span>Value</span><i></i><span>Qualification</span><i></i><span>Contact</span><i></i><span>Meeting</span></div></div>
+    <div class="flow-strip"><div class="flow-title">VIDEO CHAT FLOW</div><div class="flow-steps"><span>Visitor</span><i></i><span>Consent</span><i></i><span>Conversation</span><i></i><span>Qualification</span><i></i><span>Handoff</span><i></i><span>Meeting</span></div></div>
+    <div class="flow-full"><img src="../images/taira/text-flow.png" alt="Detailed text chat conversation flow"></div>
+    <div class="flow-full"><img src="../images/taira/video-flow.png" alt="Detailed video chat conversation flow"></div>
+  </section>
+
+  <section class="taira-section taira-intent">
+    <div class="taira-section-no">05</div>
+    <div class="taira-section-label">DESIGNING FOR INTENT</div>
+    <div class="intent-grid">
+      <div><h3>Qualification shouldn't happen all at once.</h3><p>The conversation adapts to what the visitor appears to need. Value comes first; contact capture follows only when the conversation has enough context to make the next step useful.</p></div>
+      <div class="intent-list">
+        <div><b>LOW INTENT</b><span>AI provides value and keeps the conversation open.</span></div>
+        <div><b>MEDIUM INTENT</b><span>AI asks contextual questions to understand the need.</span></div>
+        <div><b>HIGH INTENT</b><span>AI moves toward qualification and conversion.</span></div>
+      </div>
+    </div>
+    <div class="intent-visual"><img src="../images/taira/text-chat-modal.png" alt="Taira text chat modal showing intent suggestions"></div>
+  </section>
+
+  <section class="taira-section taira-system">
+    <div class="taira-section-no">06</div>
+    <div class="taira-section-label">THE DESIGN SYSTEM</div>
+    <div class="system-head"><h3>From individual screens to a reusable conversation system.</h3><p>Once the interaction logic was clear, I translated it into a compact UI system for consistency across states and touchpoints.</p></div>
+    <div class="system-grid">
+      <figure><img src="../images/taira/color-system.png" alt="Taira color system"><figcaption>01 · Colour system</figcaption></figure>
+      <figure><img src="../images/taira/buttons.png" alt="Taira button states"><figcaption>02 · Button states</figcaption></figure>
+      <figure><img src="../images/taira/input-bar.png" alt="Taira input bar"><figcaption>03 · Input bar</figcaption></figure>
+      <figure><img src="../images/taira/chat-bubbles.png" alt="Taira chat bubbles"><figcaption>04 · Chat bubbles</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="taira-section taira-evolution">
+    <div class="taira-section-no">07</div>
+    <div class="taira-section-label">FROM WIREFRAME TO FINAL INTERFACE</div>
+    <div class="evolution-copy"><h3>Structure first.<br><em>Polish second.</em></h3><p>I moved from grayscale structure and conversation logic into a high-fidelity interface aligned with Trigma's existing visual identity — dark surfaces, red action states, rounded conversation elements and a more human AI presence.</p></div>
+    <div class="evolution-images">
+      <figure><img src="../images/taira/opening-screen.png" alt="Taira opening experience"><figcaption>01 · Opening experience</figcaption></figure>
+      <figure><img src="../images/taira/text-chat-final.png" alt="Taira text chat experience"><figcaption>02 · Text chat</figcaption></figure>
+      <figure><img src="../images/taira/video-chat-final.png" alt="Taira video chat scheduling experience"><figcaption>03 · Video chat + scheduling</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="taira-final">
+    <div class="taira-section-no">08</div>
+    <div class="taira-section-label">THE FINAL EXPERIENCE</div>
+    <div class="final-heading"><h2>Meet <em>Taira.</em></h2><p>Explore → understand → qualify → connect.</p></div>
+    <div class="final-hero-image"><img src="../images/taira/hero-video-chat.png" alt="Final Taira video assistant experience"></div>
+    <div class="final-bottom"><div><small>OUTCOME</small><h3>Designed and validated for handoff to development.</h3></div><p>The final concept covered both text and AI-avatar conversation flows. The Trigma team validated the intent-based branching and progressive information-capture approach ahead of development. The experience was not deployed live during the internship.</p></div>
+  </section>
+
+  <section class="taira-next">
+    <div><small>NEXT PROJECT</small><h2>Nighthaven</h2></div>
+    <a href="nighthaven.html">View case study <span>↗</span></a>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <span>Khanak Sethi</span>
-  <span>Built with care, 2026</span>
-</footer>
+<footer class="taira-footer"><span>Khanak Sethi</span><span>UI/UX · Visual Design · Communication</span><span>© 2026</span></footer>
 
+<script>
+const progress=document.getElementById('tairaProgress');
+addEventListener('scroll',()=>{const h=document.documentElement; progress.style.transform=`scaleX(${scrollY/(h.scrollHeight-innerHeight)})`;},{passive:true});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible')}),{threshold:.08});
+document.querySelectorAll('.taira-section,.taira-final,.taira-next').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
