@@ -40,26 +40,6 @@
       <span></span>
     </button>
   </section>
-
-  <section class="stats wrap reveal" id="stats">
-    <div class="stat">
-      <div class="stat-number" data-target="6">0</div>
-      <div class="stat-label">Projects designed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number" data-target="4">0</div>
-      <div class="stat-label">Months, industry internship</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number" data-target="3">0</div>
-      <div class="stat-label">Personas mapped, on average</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number" data-suffix="th" data-target="4">0</div>
-      <div class="stat-label">Year design student</div>
-    </div>
-  </section>
-
   <section class="drag-section" id="browse">
     <div class="wrap">
       <div class="section-head">
@@ -69,11 +49,11 @@
     </div>
     <div class="drag-scroll" id="dragScroll">
       <a class="drag-card" href="projects/sethi-jewellers.html">
-        <img src="images/thumbs/sethi-marquee.jpg" alt="Sethi Jewellers" draggable="false">
+        <img src="images/thumbs/sethi-home-thumb.jpg" alt="Sethi Jewellers" draggable="false">
         <div class="drag-card-label">Sethi Jewellers</div>
       </a>
       <a class="drag-card" href="projects/taira-trigma.html">
-        <img src="images/thumbs/trigma-marquee.jpg" alt="Taira, for Trigma AI" draggable="false">
+        <img src="images/thumbs/trigma-home-thumb.jpg" alt="Taira, for Trigma AI" draggable="false">
         <div class="drag-card-label">Taira, for Trigma AI</div>
       </a>
       <a class="drag-card" href="projects/walk-in-my-shoes.html">
@@ -81,7 +61,7 @@
         <div class="drag-card-label">Walk In My Shoes</div>
       </a>
       <a class="drag-card" href="projects/nighthaven.html">
-        <img src="images/thumbs/nighthaven-marquee.jpg" alt="Nighthaven" draggable="false">
+        <img src="images/thumbs/nighthaven-home-thumb.jpg" alt="Nighthaven" draggable="false">
         <div class="drag-card-label">Nighthaven</div>
       </a>
       <a class="drag-card" href="projects/fruit-cider.html">
@@ -103,7 +83,7 @@
 
     <div class="work-list">
       <a class="project-spread" href="projects/sethi-jewellers.html">
-        <div class="spread-media" style="background-image:url('images/thumbs/sethi-spread.jpg');"></div>
+        <div class="spread-media" style="background-image:url('images/thumbs/sethi-home-thumb.jpg');"></div>
         <div class="spread-info">
           <span class="project-tag">UI/UX</span>
           <div class="project-title">Sethi Jewellers</div>
@@ -123,7 +103,7 @@
       </a>
 
       <a class="project-spread" href="projects/taira-trigma.html">
-        <div class="spread-media" style="background-image:url('images/thumbs/trigma-spread.jpg');"></div>
+        <div class="spread-media" style="background-image:url('images/thumbs/trigma-home-thumb.jpg');"></div>
         <div class="spread-info">
           <span class="project-tag">UI/UX</span>
           <div class="project-title">Taira, for Trigma AI</div>
@@ -133,7 +113,7 @@
       </a>
 
       <a class="project-spread reverse" href="projects/nighthaven.html">
-        <div class="spread-media" style="background-image:url('images/thumbs/nighthaven-spread.jpg');"></div>
+        <div class="spread-media" style="background-image:url('images/thumbs/nighthaven-home-thumb.jpg');"></div>
         <div class="spread-info">
           <span class="project-tag">Product Design</span>
           <div class="project-title">Nighthaven</div>
@@ -217,41 +197,6 @@
   } else {
     spreads.forEach(el => el.classList.add('in-view'));
     revealEls.forEach(el => el.classList.add('in-view'));
-  }
-
-  // ============================================
-  // Count-up stats: numbers animate from 0 to their
-  // target once the stats strip scrolls into view.
-  // ============================================
-  const statNumbers = document.querySelectorAll('.stat-number');
-
-  function animateCount(el) {
-    const target = parseInt(el.dataset.target, 10);
-    const suffix = el.dataset.suffix || '';
-    const duration = 900;
-    const start = performance.now();
-
-    function tick(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target) + suffix;
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  if ('IntersectionObserver' in window && statNumbers.length) {
-    const statObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCount(entry.target);
-          statObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    statNumbers.forEach(el => statObserver.observe(el));
-  } else {
-    statNumbers.forEach(el => { el.textContent = el.dataset.target + (el.dataset.suffix || ''); });
   }
 
   // ============================================

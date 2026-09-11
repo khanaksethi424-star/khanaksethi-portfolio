@@ -147,27 +147,6 @@ a:focus-visible, button:focus-visible{
 .reveal.in-view{ opacity:1; transform:translateY(0); }
 
 /* ============================================
-   STATS STRIP
-   ============================================ */
-.stats{
-  display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
-  padding:36px 0 40px;
-  border-top:1px solid var(--line);
-}
-.stat-number{
-  font-family:var(--serif); font-weight:500; color:var(--accent);
-  font-size:clamp(2.2rem, 5vw, 3.2rem); line-height:1;
-}
-.stat-label{
-  color:var(--ink-soft); font-size:0.86rem; margin-top:8px; max-width:16ch;
-}
-
-@media (prefers-reduced-motion: reduce){
-  .status-dot, .scroll-cue span{ animation:none; }
-  .reveal-load{ opacity:1; transform:none; animation:none; }
-}
-
-/* ============================================
    SECTION HEADINGS (shared)
    ============================================ */
 .section-head{
@@ -432,7 +411,6 @@ footer.site-footer{
    ============================================ */
 @media (max-width:720px){
   .nav ul{ gap:16px; }
-  .stats{ grid-template-columns:1fr 1fr; }
   .project-spread, .project-spread.reverse{ flex-direction:column; gap:20px; padding:36px 4px; }
   .spread-media{ flex:none; width:100%; aspect-ratio:16/10; }
   .about .wrap{ grid-template-columns:1fr; }
