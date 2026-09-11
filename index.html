@@ -3,298 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khanak Sethi — UI/UX &amp; Product Designer</title>
-<meta name="description" content="Portfolio of Khanak Sethi, a UI/UX and product designer.">
-
+<title>Khanak Sethi — UI/UX & Product Designer</title>
+<meta name="description" content="Portfolio of Khanak Sethi, a UI/UX and product designer. Human-centred product thinking, interfaces and visual systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,500italic&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <header class="nav">
-  <div class="wrap">
-    <div class="name">Khanak Sethi</div>
-    <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Khanak Sethi</a>
+    <nav aria-label="Primary navigation">
+      <a class="nav-link active" href="#work">Work</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <a class="resume-link" href="mailto:khanaksethi424@gmail.com?subject=Resume%20Request">Resume <span>↓</span></a>
   </div>
 </header>
 
 <main>
-  <section class="hero wrap">
-    <div class="hero-kicker reveal-load" style="animation-delay:0s">
-      <span class="kicker-line"></span>
-      PRODUCT · UI/UX · HUMAN-CENTRED DESIGN
-    </div>
-    <h1 class="reveal-load">Khanak<br>Sethi</h1>
-    <p class="tagline reveal-load" style="animation-delay:0.08s">Fourth-year design student who starts with people, not pixels.</p>
-    <p class="intro reveal-load" style="animation-delay:0.16s">I'm a B.Des student focused on UI/UX and product design, working mostly at the intersection of research and interface — personas, journey maps, and empathy work show up in almost everything I ship.</p>
-
-    <div class="hero-actions reveal-load" style="animation-delay:0.24s">
-      <a class="cta" href="#work">View my work</a>
-      <span class="status-pill"><span class="status-dot"></span> Open to work</span>
-    </div>
-
-    <button class="scroll-cue" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to work">
-      <span></span>
-    </button>
-  </section>
-  <section class="marquee-section" id="browse" aria-label="Selected projects">
-    <div class="wrap">
-      <div class="section-head marquee-head">
-        <div>
-          <span class="eyebrow">A moving archive</span>
-          <h2>Browse the work</h2>
-        </div>
-        <span class="count">Selected projects <span class="count-arrow">↗</span></span>
+  <section class="hero" id="top">
+    <div class="hero-copy reveal-load">
+      <p class="eyebrow">PRODUCT &nbsp;·&nbsp; UI/UX &nbsp;·&nbsp; HUMAN-CENTRED DESIGN</p>
+      <h1>Khanak Sethi<span class="star">✦</span></h1>
+      <p class="hero-tagline">Fourth-year design student<br>who starts with <em>people</em>,<br><em>not pixels.</em></p>
+      <div class="hero-actions">
+        <a class="primary-btn magnetic" href="#work">View my work <span>↗</span></a>
+        <a class="text-btn" href="#about">About me <span>↗</span></a>
       </div>
     </div>
 
+    <div class="hero-visual reveal-load" style="animation-delay:.12s">
+      <div class="portrait-stage">
+        <div class="portrait-blob"></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit-dot"></div>
+        <div class="paper-card paper-a"></div>
+        <div class="paper-card paper-b"></div>
+        <div class="portrait-wrap">
+          <img src="images/khanak-portrait.jpg" alt="Khanak Sethi">
+        </div>
+        <div class="hero-note">good design<br>builds better<br><em>experiences.</em><span>♡</span></div>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#browse"><span>SCROLL</span><i></i></a>
+    <div class="hero-line"></div>
+  </section>
+
+  <section class="browse" id="browse" aria-label="Selected projects">
+    <div class="section-bar">
+      <span>SELECTED WORK</span>
+      <span class="bar-line"></span>
+      <span>06 PROJECTS</span>
+      <div class="carousel-controls" aria-hidden="true"><span>←</span><span>→</span></div>
+    </div>
     <div class="marquee-window">
       <div class="marquee-track">
         <div class="marquee-set">
-          <a class="marquee-card" href="projects/sethi-jewellers.html">
-            <img src="images/thumbs/sethi-home-thumb.jpg" alt="Sethi Jewellers" draggable="false">
-            <span class="marquee-card-label">Sethi Jewellers <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/taira-trigma.html">
-            <img src="images/thumbs/trigma-home-thumb.jpg" alt="Taira, for Trigma AI" draggable="false">
-            <span class="marquee-card-label">Taira, for Trigma AI <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/walk-in-my-shoes.html">
-            <img src="images/thumbs/shoes-home-thumb.jpg" alt="Walk In My Shoes" draggable="false">
-            <span class="marquee-card-label">Walk In My Shoes <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/nighthaven.html">
-            <img src="images/thumbs/nighthaven-home-thumb.jpg" alt="Nighthaven" draggable="false">
-            <span class="marquee-card-label">Nighthaven <small>Product Design</small></span>
-          </a>
-          <a class="marquee-card" href="projects/fruit-cider.html">
-            <img src="images/thumbs/cider-home-thumb.jpg" alt="Fruit Cider" draggable="false">
-            <span class="marquee-card-label">Fruit Cider <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/pecmate.html">
-            <img src="images/thumbs/pecmate-home-thumb.jpg" alt="PECmate" draggable="false">
-            <span class="marquee-card-label">PECmate <small>UI/UX</small></span>
-          </a>
+          <a class="marquee-card" href="projects/taira-trigma.html"><img src="images/thumbs/trigma-home-thumb.jpg" alt="Taira for Trigma AI"><div><b>Taira</b><small>Trigma AI</small></div></a>
+          <a class="marquee-card" href="projects/sethi-jewellers.html"><img src="images/thumbs/sethi-home-thumb.jpg" alt="Sethi Jewellers"><div><b>Sethi Jewellers</b><small>Jewellery App</small></div></a>
+          <a class="marquee-card" href="projects/nighthaven.html"><img src="images/thumbs/nighthaven-home-thumb.jpg" alt="Nighthaven sleeping bag"><div><b>Nighthaven</b><small>Product Design</small></div></a>
+          <a class="marquee-card" href="projects/walk-in-my-shoes.html"><img src="images/thumbs/shoes-home-thumb.jpg" alt="Walk In My Shoes"><div><b>Walk In My Shoes</b><small>Empathy App</small></div></a>
+          <a class="marquee-card" href="projects/fruit-cider.html"><img src="images/thumbs/cider-home-thumb.jpg" alt="Fruit Cider"><div><b>Fruit Cider</b><small>Brand + Packaging</small></div></a>
+          <a class="marquee-card" href="projects/pecmate.html"><img src="images/thumbs/pecmate-home-thumb.jpg" alt="PECmate"><div><b>PECmate</b><small>Campus Carpooling</small></div></a>
         </div>
-
         <div class="marquee-set" aria-hidden="true">
-          <a class="marquee-card" href="projects/sethi-jewellers.html" tabindex="-1">
-            <img src="images/thumbs/sethi-home-thumb.jpg" alt="" draggable="false">
-            <span class="marquee-card-label">Sethi Jewellers <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/taira-trigma.html" tabindex="-1">
-            <img src="images/thumbs/trigma-home-thumb.jpg" alt="" draggable="false">
-            <span class="marquee-card-label">Taira, for Trigma AI <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/walk-in-my-shoes.html" tabindex="-1">
-            <img src="images/thumbs/shoes-home-thumb.jpg" alt="" draggable="false">
-            <span class="marquee-card-label">Walk In My Shoes <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/nighthaven.html" tabindex="-1">
-            <img src="images/thumbs/nighthaven-home-thumb.jpg" alt="" draggable="false">
-            <span class="marquee-card-label">Nighthaven <small>Product Design</small></span>
-          </a>
-          <a class="marquee-card" href="projects/fruit-cider.html" tabindex="-1">
-            <img src="images/thumbs/cider-home-thumb.jpg" alt="" draggable="false">
-            <span class="marquee-card-label">Fruit Cider <small>UI/UX</small></span>
-          </a>
-          <a class="marquee-card" href="projects/pecmate.html" tabindex="-1">
-            <img src="images/thumbs/pecmate-home-thumb.jpg" alt="" draggable="false">
-            <span class="marquee-card-label">PECmate <small>UI/UX</small></span>
-          </a>
+          <a class="marquee-card" href="projects/taira-trigma.html" tabindex="-1"><img src="images/thumbs/trigma-home-thumb.jpg" alt=""><div><b>Taira</b><small>Trigma AI</small></div></a>
+          <a class="marquee-card" href="projects/sethi-jewellers.html" tabindex="-1"><img src="images/thumbs/sethi-home-thumb.jpg" alt=""><div><b>Sethi Jewellers</b><small>Jewellery App</small></div></a>
+          <a class="marquee-card" href="projects/nighthaven.html" tabindex="-1"><img src="images/thumbs/nighthaven-home-thumb.jpg" alt=""><div><b>Nighthaven</b><small>Product Design</small></div></a>
+          <a class="marquee-card" href="projects/walk-in-my-shoes.html" tabindex="-1"><img src="images/thumbs/shoes-home-thumb.jpg" alt=""><div><b>Walk In My Shoes</b><small>Empathy App</small></div></a>
+          <a class="marquee-card" href="projects/fruit-cider.html" tabindex="-1"><img src="images/thumbs/cider-home-thumb.jpg" alt=""><div><b>Fruit Cider</b><small>Brand + Packaging</small></div></a>
+          <a class="marquee-card" href="projects/pecmate.html" tabindex="-1"><img src="images/thumbs/pecmate-home-thumb.jpg" alt=""><div><b>PECmate</b><small>Campus Carpooling</small></div></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="work wrap" id="work">
-    <div class="section-head">
-      <h2>Selected work</h2>
-      <span class="count">6 projects</span>
+  <section class="work" id="work">
+    <div class="work-heading reveal">
+      <div>
+        <p class="eyebrow">FEATURED PROJECTS</p>
+        <h2>Projects that shape<br>better <em>experiences.</em></h2>
+      </div>
+      <a class="view-all" href="#contact">VIEW ALL PROJECTS <span>⟶</span></a>
     </div>
 
-    <div class="work-list">
-      <a class="project-spread" href="projects/sethi-jewellers.html" data-preview="images/thumbs/sethi-home-thumb.jpg" data-project="Sethi Jewellers" data-type="UI/UX" data-description="Luxury jewellery shopping, reimagined for trust and desire.">
-        <div class="spread-media" style="background-image:url('images/thumbs/sethi-home-thumb.jpg');"></div>
-        <div class="spread-info">
-          <span class="project-tag">UI/UX</span>
-          <div class="project-title">Sethi Jewellers</div>
-          <p class="project-tagline">Luxury jewellery shopping, reimagined for trust and desire.</p>
-          <span class="view-link">View project &rarr;</span>
-        </div>
+    <div class="project-grid">
+      <a class="project-card card-large reveal" href="projects/taira-trigma.html">
+        <div class="card-image"><img src="images/thumbs/trigma-home-thumb.jpg" alt="Taira for Trigma AI"></div>
+        <div class="card-meta"><div><strong>Taira</strong><small>TRIGMA AI &nbsp;·&nbsp; UI/UX DESIGN</small></div><span>↗</span></div>
       </a>
-
-      <a class="project-spread reverse" href="projects/walk-in-my-shoes.html">
-        <div class="spread-media" style="background-image:url('images/thumbs/shoes-home-thumb.jpg');"></div>
-        <div class="spread-info">
-          <span class="project-tag">UI/UX</span>
-          <div class="project-title">Walk In My Shoes</div>
-          <p class="project-tagline">An empathy-driven app that lets you live someone else's day.</p>
-          <span class="view-link">View project &rarr;</span>
-        </div>
+      <a class="project-card card-large reveal" href="projects/sethi-jewellers.html">
+        <div class="card-image"><img src="images/thumbs/sethi-home-thumb.jpg" alt="Sethi Jewellers"></div>
+        <div class="card-meta"><div><strong>Sethi Jewellers</strong><small>JEWELLERY APP &nbsp;·&nbsp; UI/UX DESIGN</small></div><span>↗</span></div>
       </a>
-
-      <a class="project-spread" href="projects/taira-trigma.html" data-preview="images/thumbs/trigma-home-thumb.jpg" data-project="Taira, for Trigma AI" data-type="UI/UX" data-description="Conversational AI that qualifies leads instead of losing them to a form.">
-        <div class="spread-media" style="background-image:url('images/thumbs/trigma-home-thumb.jpg');"></div>
-        <div class="spread-info">
-          <span class="project-tag">UI/UX</span>
-          <div class="project-title">Taira, for Trigma AI</div>
-          <p class="project-tagline">A conversational AI that qualifies leads instead of losing them to a form.</p>
-          <span class="view-link">View project &rarr;</span>
-        </div>
+      <a class="project-card reveal" href="projects/nighthaven.html">
+        <div class="card-image"><img src="images/thumbs/nighthaven-home-thumb.jpg" alt="Nighthaven"></div>
+        <div class="card-meta"><div><strong>Nighthaven</strong><small>SLEEPING BAG &nbsp;·&nbsp; PRODUCT DESIGN</small></div><span>↗</span></div>
       </a>
-
-      <a class="project-spread reverse" href="projects/nighthaven.html">
-        <div class="spread-media" style="background-image:url('images/thumbs/nighthaven-home-thumb.jpg');"></div>
-        <div class="spread-info">
-          <span class="project-tag">Product Design</span>
-          <div class="project-title">Nighthaven</div>
-          <p class="project-tagline">A sleeping bag designed for warmth, safety, and dignity.</p>
-          <span class="view-link">View project &rarr;</span>
-        </div>
+      <a class="project-card reveal" href="projects/walk-in-my-shoes.html">
+        <div class="card-image"><img src="images/thumbs/shoes-home-thumb.jpg" alt="Walk In My Shoes"></div>
+        <div class="card-meta"><div><strong>Walk In My Shoes</strong><small>EMPATHY APP &nbsp;·&nbsp; UI/UX DESIGN</small></div><span>↗</span></div>
       </a>
-
-      <a class="project-spread" href="projects/fruit-cider.html" data-preview="images/thumbs/cider-home-thumb.jpg" data-project="Fruit Cider" data-type="UI/UX" data-description="A 3D carousel that puts flavor front and center.">
-        <div class="spread-media" style="background-image:url('images/thumbs/cider-home-thumb.jpg');"></div>
-        <div class="spread-info">
-          <span class="project-tag">UI/UX</span>
-          <div class="project-title">Fruit Cider</div>
-          <p class="project-tagline">A 3D carousel that puts flavor front and center.</p>
-          <span class="view-link">View project &rarr;</span>
-        </div>
+      <a class="project-card reveal" href="projects/fruit-cider.html">
+        <div class="card-image"><img src="images/thumbs/cider-home-thumb.jpg" alt="Fruit Cider"></div>
+        <div class="card-meta"><div><strong>Fruit Cider</strong><small>BRAND + PACKAGING &nbsp;·&nbsp; UI/UX</small></div><span>↗</span></div>
       </a>
-
-      <a class="project-spread reverse" href="projects/pecmate.html">
-        <div class="spread-media" style="background-image:url('images/thumbs/pecmate-home-thumb.jpg');"></div>
-        <div class="spread-info">
-          <span class="project-tag">UI/UX</span>
-          <div class="project-title">PECmate</div>
-          <p class="project-tagline">One verified campus, one trusted ride.</p>
-          <span class="view-link">View project &rarr;</span>
-        </div>
+      <a class="project-card reveal" href="projects/pecmate.html">
+        <div class="card-image"><img src="images/thumbs/pecmate-home-thumb.jpg" alt="PECmate"></div>
+        <div class="card-meta"><div><strong>PECmate</strong><small>CAMPUS CARPOOLING &nbsp;·&nbsp; UI/UX</small></div><span>↗</span></div>
       </a>
     </div>
   </section>
 
-  <section class="about wrap reveal" id="about">
-    <div class="about-copy">
-      <div class="section-head"><h2>About</h2></div>
-      <p>I'm <strong>Khanak</strong>, a fourth-year design student who likes to understand a problem properly before opening Figma. Most of my projects start with research — personas, journey maps, sometimes just talking to people — because the interface only works if the thinking underneath it does too.</p>
-      <a class="about-link" href="#contact">More about me <span>↗</span></a>
+  <section class="about" id="about">
+    <div class="about-visual reveal">
+      <div class="about-shape"></div>
+      <div class="about-photo"><img src="images/khanak-portrait.jpg" alt="Khanak Sethi"></div>
+      <div class="leaf leaf-1">❧</div><div class="leaf leaf-2">❧</div>
+      <div class="about-note">designing<br>for people,<br>not just<br>products ♡</div>
     </div>
-    <div class="about-portrait">
-      <img src="images/khanak-portrait.jpg" alt="Khanak Sethi">
-      <span class="portrait-note">that's me ↗</span>
+    <div class="about-copy reveal">
+      <p class="eyebrow">ABOUT</p>
+      <h2>Hi, I'm <em>Khanak.</em></h2>
+      <p>I'm a design student at PEC, Chandigarh, with a deep interest in product design, UI/UX and human-centred problem solving. I believe good design is not just about how something looks, but how it feels, works and makes life a little easier for the people who use it.</p>
+      <div class="skill-tags"><span>RESEARCH</span><span>USER-CENTRED DESIGN</span><span>INTERACTION DESIGN</span><span>PROTOTYPING</span><span>ACCESSIBILITY</span><span>PRACTICAL INNOVATION</span></div>
+      <a class="text-btn" href="#experience">Learn more <span>↗</span></a>
     </div>
   </section>
 
-  <section class="contact wrap reveal" id="contact">
-    <h2>Let's talk about your next project.</h2>
-    <div class="contact-links">
-      <a href="mailto:khanaksethi424@gmail.com">Email me</a>
-      <a href="https://www.linkedin.com/in/khanak-sethi-aa773a310/" target="_blank" rel="noopener">LinkedIn</a>
+  <section class="experience" id="experience">
+    <div class="experience-col reveal">
+      <p class="eyebrow">EXPERIENCE</p>
+      <div class="timeline-item"><span class="timeline-dot"></span><div><h3>Trigma Solutions</h3><small>UI/UX Design Intern &nbsp;·&nbsp; Feb 2025 – Present</small></div><p>Website graphics, blog assets,<br>UI/UX for personal website.</p></div>
+      <div class="timeline-item"><span class="timeline-dot"></span><div><h3>Trantor Inc.</h3><small>Design Intern &nbsp;·&nbsp; Jun 2025 – Jul 2025</small></div><p>Visual design, social media graphics,<br>brand assets.</p></div>
+      <a class="view-all" href="mailto:khanaksethi424@gmail.com?subject=Resume%20Request">VIEW RESUME <span>⟶</span></a>
+    </div>
+    <div class="capabilities reveal">
+      <p class="eyebrow">DESIGN CAPABILITIES</p>
+      <div class="cap-grid">
+        <div><span class="cap-icon">▣</span><b>UI/UX Design</b></div><div><span class="cap-icon">◇</span><b>Product Design</b></div><div><span class="cap-icon">◎</span><b>User Research</b></div>
+        <div><span class="cap-icon">✣</span><b>Prototyping</b></div><div><span class="cap-icon">◌</span><b>Visual Design</b></div><div><span class="cap-icon">△</span><b>Adobe Suite</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner reveal">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Have a project in <em>mind?</em></h2>
+      <p>I'm always open to new opportunities, collaborations<br>or just a good design conversation.</p>
+      <a class="contact-btn magnetic" href="mailto:khanaksethi424@gmail.com">Get in touch <span>↗</span></a>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <span>Khanak Sethi — made with care and a lot of tab-switching, 2026</span>
-  <span id="liveClock">—</span>
-</footer>
-
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-<nav class="side-nav" id="sideNav">
-  <a href="#work" data-label="Work"><span></span></a>
-  <a href="#about" data-label="About"><span></span></a>
-  <a href="#contact" data-label="Contact"><span></span></a>
-</nav>
+<footer class="site-footer"><span>Khanak Sethi — made with care and a lot of tab-switching, 2026</span><span id="liveClock">—</span></footer>
 
 <script>
-  // ============================================
-  // Scroll-reveal: project spreads AND general
-  // sections (.reveal) fade/slide in as they enter
-  // the viewport.
-  // ============================================
-  const spreads = document.querySelectorAll('.project-spread');
-  const revealEls = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    spreads.forEach(el => observer.observe(el));
-    revealEls.forEach(el => observer.observe(el));
-  } else {
-    spreads.forEach(el => el.classList.add('in-view'));
-    revealEls.forEach(el => el.classList.add('in-view'));
-  }
-
-  // ============================================
-  // Live clock — small personality touch in the
-  // footer, shows the visitor's own local time.
-  // ============================================
-  const clockEl = document.getElementById('liveClock');
-  function updateClock() {
-    if (!clockEl) return;
-    const now = new Date();
-    const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    clockEl.textContent = `It's ${time} where you are`;
-  }
-  updateClock();
-  setInterval(updateClock, 30000);
-
-  // ============================================
-  // Scroll progress — a quiet visual indicator
-  // that reacts continuously to the page.
-  // ============================================
-  const scrollProgress = document.getElementById('scrollProgress');
-  function updateScrollProgress() {
-    if (!scrollProgress) return;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-    scrollProgress.style.transform = `scaleX(${progress})`;
-  }
-  window.addEventListener('scroll', updateScrollProgress, { passive: true });
-  updateScrollProgress();
-
-  // ============================================
-  // Side nav: highlights the section currently in
-  // view, click a dot to jump straight to it.
-  // ============================================
-  const sideNavLinks = document.querySelectorAll('.side-nav a');
-  const trackedSections = ['work', 'about', 'contact']
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-
-  if ('IntersectionObserver' in window && sideNavLinks.length) {
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const link = document.querySelector(`.side-nav a[href="#${entry.target.id}"]`);
-        if (!link) return;
-        if (entry.isIntersecting) {
-          sideNavLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        }
-      });
-    }, { threshold: 0.4 });
-
-    trackedSections.forEach(sec => navObserver.observe(sec));
-  }
+const revealEls=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');obs.unobserve(e.target)}}),{threshold:.14});revealEls.forEach(el=>obs.observe(el))}else revealEls.forEach(el=>el.classList.add('in-view'));
+const progress=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform=`scaleX(${max?scrollY/max:0})`},{passive:true});
+const clock=document.getElementById('liveClock');function tick(){clock.textContent=`It's ${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} where you are`}tick();setInterval(tick,30000);
+const magnetic=document.querySelectorAll('.magnetic');magnetic.forEach(btn=>{btn.addEventListener('pointermove',e=>{const r=btn.getBoundingClientRect();btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.12}px)`});btn.addEventListener('pointerleave',()=>btn.style.transform='')});
+const navLinks=document.querySelectorAll('.nav-link'), sections=[...document.querySelectorAll('main section[id]')];const nobs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>nobs.observe(s));
 </script>
-
 </body>
 </html>
