@@ -230,6 +230,36 @@ footer.site-footer{
   font-size:0.82rem; color:var(--ink-soft);
 }
 
+
+/* About portrait — personal, editorial and intentionally quieter than the work. */
+.about{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,420px);
+  align-items:center;
+  gap:72px;
+}
+.about-copy{max-width:620px;}
+.about-copy p{max-width:52ch; margin:0 0 24px;}
+.about-link{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:.88rem; border-bottom:1px solid var(--ink);
+  padding-bottom:5px; transition:gap .25s ease, color .25s ease;
+}
+.about-link:hover{gap:15px; color:var(--accent);}
+.about-portrait{position:relative; justify-self:end; width:min(100%,390px);}
+.about-portrait img{
+  display:block; width:100%; aspect-ratio:4/5; object-fit:cover;
+  object-position:center 47%; border-radius:180px 180px 18px 18px;
+  filter:saturate(.88); box-shadow:0 24px 60px rgba(23,24,28,.14);
+  transition:transform .6s cubic-bezier(.2,.7,.2,1), filter .4s ease;
+}
+.about-portrait:hover img{transform:translateY(-8px) rotate(1deg); filter:saturate(1);}
+.portrait-note{
+  position:absolute; right:-22px; top:18px;
+  font-family:var(--serif); font-size:.95rem; transform:rotate(5deg);
+  color:var(--ink-soft);
+}
+
 /* ============================================
    CASE STUDY PAGES
    ============================================ */
@@ -389,6 +419,9 @@ footer.site-footer{
 .cursor-tag.visible{ opacity:1; transform:translate(-50%,-50%) scale(1); }
 
 @media (max-width:720px){
+  .about{grid-template-columns:1fr; gap:34px;}
+  .about-portrait{justify-self:start; width:min(82vw,360px);}
+  .portrait-note{right:-8px;}
   .cursor-tag{ display:none; }
 }
 @media (prefers-reduced-motion: reduce){
@@ -442,17 +475,6 @@ footer.site-footer{
   position:fixed; top:0; left:0; right:0; height:2px;
   background:var(--accent); transform:scaleX(0); transform-origin:left center;
   z-index:100; pointer-events:none;
-}
-
-.cursor-orb{
-  position:fixed; top:0; left:0; width:14px; height:14px;
-  border:1px solid var(--accent); border-radius:50%;
-  pointer-events:none; z-index:80; opacity:.65;
-  transition:width .18s ease, height .18s ease, opacity .18s ease;
-  mix-blend-mode:multiply;
-}
-body:has(.project-spread:hover) .cursor-orb{
-  width:28px; height:28px; opacity:.35;
 }
 
 /* Auto-moving project ribbon — intentionally NOT draggable. */
@@ -540,46 +562,6 @@ body:has(.project-spread:hover) .cursor-orb{
 }
 .project-spread:hover .spread-info{
   transform:translateX(5px);
-}
-
-/* Floating case-study preview. */
-.project-preview{
-  position:fixed; width:300px; height:238px;
-  z-index:70; pointer-events:none;
-  background:var(--paper);
-  border:1px solid rgba(23,24,28,.12);
-  border-radius:12px; overflow:hidden;
-  box-shadow:0 28px 70px rgba(23,24,28,.22);
-  opacity:0; transform:translateY(10px) scale(.96);
-  transition:opacity .22s ease, transform .28s cubic-bezier(.2,.8,.2,1);
-}
-.project-preview.visible{
-  opacity:1; transform:translateY(0) scale(1);
-}
-.preview-image{
-  height:142px; background-size:cover; background-position:center;
-}
-.preview-copy{ padding:12px 14px 14px; }
-.preview-topline{
-  display:flex; justify-content:space-between; align-items:center;
-  color:var(--ink-soft); font-size:.66rem; letter-spacing:.1em;
-  text-transform:uppercase; margin-bottom:5px;
-}
-.preview-topline span:last-child{ color:var(--accent); font-size:.9rem; }
-.preview-copy strong{
-  display:block; font-family:var(--serif); font-size:1.05rem; font-weight:500;
-}
-.preview-copy p{
-  margin:3px 0 0; color:var(--ink-soft); font-size:.74rem; line-height:1.35;
-}
-
-/* Cursor CTA gets a directional arrow rather than a plain pill. */
-.cursor-tag{
-  display:flex; align-items:center; gap:10px;
-  padding:9px 13px 9px 15px;
-}
-.cursor-tag b{
-  font-size:.85rem; color:var(--accent); font-weight:500;
 }
 
 @media (prefers-reduced-motion: reduce){
