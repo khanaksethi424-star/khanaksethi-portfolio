@@ -131,3 +131,89 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink)}
 .taira-case .taira-orbit{opacity:.55;box-shadow:none}
 .taira-case .taira-float-card{border-radius:2px;box-shadow:18px 18px 0 rgba(255,255,255,.035)}
 .taira-case .taira-context blockquote{border-radius:2px;box-shadow:10px 10px 0 rgba(220,45,45,.08)}
+
+
+/* =========================================================
+   V7 — QUIETER TYPE + CLEARER PROJECT DISCOVERY
+   The landing page uses a restrained editorial scale. The old
+   thumbnail marquee is replaced by a focus band so project
+   discovery happens only in the actual work section.
+   ========================================================= */
+.focus-band{border-bottom:1px solid var(--line);background:#f1ede4}
+.focus-inner{max-width:var(--max);margin:auto;padding:24px var(--pad);display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center}
+.focus-label{font-size:.52rem;letter-spacing:.16em;color:#6d675e}
+.focus-items{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.focus-items span{font-size:.72rem;letter-spacing:.01em;color:#292a27;position:relative}
+.focus-items span+span:before{content:'·';position:absolute;left:-16px;color:#a29b8e}
+.focus-inner>p{font-size:.55rem;line-height:1.5;color:#817b71;max-width:25ch;margin:0;text-align:right}
+
+/* Landing page: simple, deliberate hierarchy rather than hero-template scale. */
+.hero h1{font-size:clamp(3.5rem,5.6vw,5.4rem);line-height:.9;letter-spacing:-.04em;margin-bottom:26px}
+.hero-tagline{font-size:1.08rem;line-height:1.45;max-width:29ch;margin-bottom:30px}
+.work{padding-top:92px;padding-bottom:105px}
+.work-heading{margin-bottom:40px}
+.work-heading h2{font-size:clamp(2.65rem,4.2vw,4rem);line-height:1;letter-spacing:-.025em}
+.about-copy h2{font-size:clamp(2.8rem,4.3vw,4.1rem);line-height:1.02;letter-spacing:-.025em}
+.contact h2{font-size:clamp(3.1rem,5.4vw,5.3rem);line-height:.92;letter-spacing:-.03em}
+
+/* Remove visual weight from decorative hero note; keep the authored annotation. */
+.hero-note{font-size:.58rem;letter-spacing:.045em}
+
+/* Taira / Trigma: use the project's actual interface typography rather than a generic portfolio serif. */
+.taira-case{--taira-sans:'Poppins',Arial,sans-serif;--taira-serif:'Poppins',Arial,sans-serif;font-family:var(--taira-sans)}
+.taira-case .taira-brand,.taira-case .taira-hero h1,.taira-case .taira-hero h2,.taira-case .taira-context-grid h3,.taira-case .taira-architecture h3,.taira-case .system-head h3,.taira-case .taira-challenge-grid>h3,.taira-case .intent-grid h3,.taira-case .evolution-copy h3,.taira-case .final-heading h2,.taira-case .taira-next h2,.taira-case .taira-dual span,.taira-case .persona-row h4{font-family:var(--taira-sans);font-weight:500}
+.taira-case .taira-hero h1{font-size:clamp(3.4rem,6vw,6rem);line-height:.92;letter-spacing:-.045em}
+.taira-case .taira-hero h2{font-size:clamp(1.75rem,3vw,3.1rem);line-height:1.05;letter-spacing:-.025em;font-weight:500}
+.taira-case .taira-context-grid h3,.taira-case .taira-architecture h3,.taira-case .system-head h3,.taira-case .taira-challenge-grid>h3,.taira-case .intent-grid h3,.taira-case .evolution-copy h3{font-size:clamp(1.8rem,3vw,3rem);line-height:1.05;letter-spacing:-.025em}
+.taira-case .final-heading h2{font-size:clamp(2.8rem,5vw,4.8rem);line-height:.95;letter-spacing:-.03em}
+.taira-case .taira-next h2{font-size:2.4rem;line-height:1}
+.taira-case .taira-brandmark{font-family:var(--taira-sans)}
+
+/* Sethi: Playfair for the jewellery/editorial display layer, DM Sans for interface copy. */
+.sethi-case{font-family:'DM Sans',Arial,sans-serif}
+.sethi-case h1,.sethi-case h2,.sethi-case h3,.sethi-case blockquote,.sethi-case .sethi-next strong{font-family:'Playfair Display',Georgia,serif;font-weight:400}
+.sethi-case .sethi-hero h1{font-size:clamp(3.2rem,5.2vw,5.8rem);line-height:.95;letter-spacing:-.035em}
+.sethi-case .sethi-intro h2,.sethi-case .sethi-challenge h2,.sethi-case .sethi-journey h2,.sethi-case .sethi-ideation h2,.sethi-case .sethi-wireframes h2,.sethi-case .sethi-video-copy h2,.sethi-case .reflection-grid h2{font-size:clamp(2.5rem,4vw,4.2rem);line-height:1;letter-spacing:-.025em}
+.sethi-case .sethi-final h2{font-size:clamp(3.2rem,5.2vw,5rem);line-height:.94;letter-spacing:-.025em}
+
+/* The remaining student projects do not have a corporate type system; each gets a restrained, project-specific voice. */
+.nighthaven-case{font-family:'Manrope',Arial,sans-serif}
+.nighthaven-case h1,.nighthaven-case h2{font-family:'Manrope',Arial,sans-serif;font-weight:500;letter-spacing:-.025em}
+.nighthaven-case h1{font-size:clamp(3.2rem,5vw,5.3rem)}
+.nighthaven-case h2{font-size:clamp(2.2rem,3.5vw,3.6rem);line-height:1.03}
+.cider-case{font-family:'DM Sans',Arial,sans-serif}
+.cider-case h1,.cider-case h2{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-.025em}
+.cider-case h1{font-size:clamp(3.2rem,5vw,5.3rem)}
+.cider-case h2{font-size:clamp(2.25rem,3.5vw,3.6rem);line-height:1.02}
+.pecmate-case{font-family:'Inter',Arial,sans-serif}
+.pecmate-case h1,.pecmate-case h2{font-family:'Inter',Arial,sans-serif;font-weight:500;letter-spacing:-.03em}
+.pecmate-case h1{font-size:clamp(3.2rem,5vw,5.3rem)}
+.pecmate-case h2{font-size:clamp(2.2rem,3.5vw,3.6rem);line-height:1.04}
+.shoes-case{font-family:'Manrope',Arial,sans-serif}
+.shoes-case h1{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(3.2rem,5vw,5.3rem);letter-spacing:-.025em}
+.shoes-case h2{font-family:'Manrope',Arial,sans-serif;font-weight:600;font-size:clamp(2.2rem,3.5vw,3.6rem);line-height:1.04;letter-spacing:-.025em}
+
+/* Generic case-study shell: stop section headings from becoming poster-sized. */
+.nighthaven-case .cs-header h1,.cider-case .cs-header h1,.pecmate-case .cs-header h1,.shoes-case .cs-header h1{margin-bottom:20px}
+.nighthaven-case .cs-section h2,.cider-case .cs-section h2,.pecmate-case .cs-section h2,.shoes-case .cs-section h2{margin-bottom:20px}
+
+@media(max-width:900px){
+  .focus-inner{grid-template-columns:1fr;gap:10px}
+  .focus-inner>p{text-align:left;max-width:42ch}
+  .focus-items{gap:14px 24px}
+  .focus-items span+span:before{left:-13px}
+  .hero h1{font-size:clamp(3.2rem,9vw,4.8rem)}
+  .work-heading h2{font-size:clamp(2.6rem,7vw,3.5rem)}
+  .contact h2{font-size:clamp(3rem,9vw,4.5rem)}
+  .taira-case .taira-hero h1{font-size:clamp(3.2rem,10vw,5rem)}
+}
+@media(max-width:600px){
+  .hero h1{font-size:3.35rem;line-height:.92}
+  .work-heading h2{font-size:2.7rem}
+  .about-copy h2{font-size:2.9rem}
+  .contact h2{font-size:3.35rem}
+  .focus-items{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
+  .focus-items span+span:before{display:none}
+  .taira-case .taira-hero h1{font-size:3.2rem}
+  .sethi-case .sethi-hero h1{font-size:3.15rem}
+}
