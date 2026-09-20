@@ -4,89 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PECmate — Khanak Sethi</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="pecmate-case">
-
-<header class="nav">
-  <div class="wrap">
-    <a class="name" href="../index.html">Khanak Sethi</a>
-    <ul>
-      <li><a href="../index.html#work">Work</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
+<header class="nav"><div class="wrap"><a class="name" href="../index.html">Khanak Sethi</a><ul><li><a href="../index.html#work">Work</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div></header>
 <main>
   <div class="wrap">
     <a class="cs-back" href="../index.html#work">&larr; All work</a>
-
     <div class="cs-header">
-      <span class="cs-tag">UI/UX &middot; Concept project</span>
+      <span class="cs-tag">UI/UX · Concept project</span>
       <h1>PECmate</h1>
-      <p class="one-liner">"One campus, one ride." A peer-to-peer carpooling app exclusive to Punjab Engineering College students, letting them find or offer rides within a trusted, verified campus community.</p>
+      <p class="one-liner">“One campus, one ride.” A peer-to-peer carpooling app for Punjab Engineering College students, built around trust, repeat commuting and low-friction ride discovery.</p>
     </div>
-
     <div class="cs-meta">
-      <div><span class="label">Role</span><span class="value">Solo &mdash; UI &amp; UX</span></div>
-      <div><span class="label">Duration</span><span class="value">[Add duration]</span></div>
+      <div><span class="label">Role</span><span class="value">UI/UX Designer</span></div>
+      <div><span class="label">Context</span><span class="value">Self-initiated campus mobility concept</span></div>
       <div><span class="label">Tools</span><span class="value">Figma</span></div>
-      <div><span class="label">Team</span><span class="value">Solo</span></div>
+      <div><span class="label">Team</span><span class="value">Solo project</span></div>
     </div>
-
-    <!-- Real screenshot -->
-    <div class="cs-hero-image" style="background-image:url('../images/pecmate-hero.png'); background-size:contain; background-color:#f2efe9;"></div>
+    <div class="cs-hero-image cs-contain" style="background-image:url('../images/pecmate-hero.png');"></div>
   </div>
 
-  <div class="cs-section">
-    <h2>Overview</h2>
-    <p>PECmate is a self-initiated concept exploring campus-specific carpooling — designed end-to-end solo, from initial idea through to a working Figma prototype.</p>
-  </div>
+  <section class="cs-section cs-lead">
+    <div class="cs-kicker">01 / THE CONTEXT</div>
+    <h2>Campus carpooling has a trust problem before it has a matching problem.</h2>
+    <p>Students travelling to and from campus can face repeated fuel, parking and commuting costs, while open ridesharing platforms introduce a different concern: who is the person on the other side of the ride?</p>
+  </section>
 
-  <div class="cs-section">
-    <h2>The problem</h2>
-    <p>College students commuting to and from campus often rely on expensive individual transport, or unreliable, unsafe ad-hoc carpooling with strangers, with no real way to verify who they'd actually be riding with.</p>
-  </div>
+  <section class="cs-section cs-split">
+    <div><div class="cs-kicker">02 / THE CORE DECISION</div><h2>Make the campus itself the trust layer.</h2></div>
+    <div><p>PECmate restricts onboarding to verified <code>@pec.edu.in</code> email addresses. Instead of building a separate identity-verification system, the concept uses an existing institutional boundary to establish who can enter the network.</p><p>That single decision shapes the rest of the experience: find a ride, see enough context to trust it, request it quickly.</p></div>
+  </section>
 
-  <div class="cs-section">
-    <h2>The solution</h2>
-    <p>PECmate restricts sign-in to verified <code>@pec.edu.in</code> college email addresses, so every user is guaranteed to be a fellow student — removing the core trust problem of open ridesharing apps entirely through onboarding, rather than a heavier verification system. From the home screen, users choose to either find a ride or offer one as a driver. Ride listings show the driver's photo, name, rating, exact pickup and drop-off points, vehicle, available seats, and per-seat price, giving riders enough to decide and request a ride within two or three taps.</p>
+  <section class="cs-section">
+    <div class="cs-kicker">03 / USER FLOW</div>
+    <h2>Two jobs, one simple home screen.</h2>
+    <div class="cs-flow">
+      <div><span>01</span><strong>Sign in</strong><small>Verified PEC email</small></div><i>&rarr;</i>
+      <div><span>02</span><strong>Choose</strong><small>Find a ride / Offer a ride</small></div><i>&rarr;</i>
+      <div><span>03</span><strong>Review</strong><small>Person, route, rating, price</small></div><i>&rarr;</i>
+      <div><span>04</span><strong>Request</strong><small>Confirm the ride</small></div>
+    </div>
+  </section>
 
-    <h3>A few decisions worth calling out</h3>
-    <p class="muted">Restricting the sign-up domain is a small detail with an outsized effect — it's the entire safety mechanism of the app, and it's achieved through onboarding rather than a complex verification flow. Rating, photo, and route pins on each ride card front-load exactly the information a rider needs, without extra taps. And the "find a ride" form stays to two fields plus a date and seat count, keeping friction low for a task students would repeat often.</p>
-  </div>
+  <section class="cs-section cs-decisions">
+    <div class="cs-kicker">04 / KEY UX DECISIONS</div>
+    <div class="cs-decision-grid">
+      <div><strong>Verified community</strong><p>Institutional email creates a closed network without a heavy verification flow.</p></div>
+      <div><strong>Information up front</strong><p>Ride cards surface photo, name, rating, route, vehicle, seats and price before a request.</p></div>
+      <div><strong>Low-friction search</strong><p>The find-ride flow keeps the repeat task compact: route, date and seats.</p></div>
+      <div><strong>Driver clarity</strong><p>Offering a ride is treated as a structured task rather than a generic post.</p></div>
+    </div>
+  </section>
 
-  <!-- Real screenshots -->
   <div class="cs-gallery">
-    <div class="shot wide" style="background-image:url('../images/pecmate-1.png'); background-size:contain; background-color:#f2efe9;"></div>
-    <div class="shot" style="background-image:url('../images/pecmate-2.png'); background-size:contain; background-color:#f2efe9;"></div>
-    <div class="shot" style="background-image:url('../images/pecmate-3.png'); background-size:contain; background-color:#f2efe9;"></div>
+    <figure class="shot wide"><img src="../images/pecmate-1.png" alt="PECmate app interface screens"></figure>
+    <figure class="shot"><img src="../images/pecmate-2.png" alt="PECmate ride discovery screens"></figure>
+    <figure class="shot"><img src="../images/pecmate-3.png" alt="PECmate ride details and flow"></figure>
   </div>
 
-  <div class="cs-section">
-    <h2>Reflection</h2>
-    <p>This was a self-initiated concept rather than a tested or shipped product — but it's the project that most shows a complete solo process, from identifying the problem through to a working, prototyped solution in Figma, without any team to lean on.</p>
-  </div>
+  <section class="cs-section cs-outcome">
+    <div class="cs-kicker">05 / REFLECTION</div>
+    <h2>A focused concept for a very specific community.</h2>
+    <p>PECmate is intentionally scoped rather than positioned as a general ridesharing platform. Designing for one campus made it possible to make trust, repeated commuting and familiar routes part of the product logic from the beginning.</p>
+    <div class="cs-callout"><span>Portfolio takeaway</span><strong>A narrower problem can produce a clearer product when the constraint becomes part of the UX.</strong></div>
+  </section>
 
-  <a class="cs-nextproject" href="sethi-jewellers.html">
-    <div>
-      <div class="label">Back to the start</div>
-      <div class="title">Sethi Jewellers</div>
-    </div>
-    <span>&rarr;</span>
-  </a>
+  <a class="cs-nextproject" href="sethi-jewellers.html"><div><div class="label">Back to selected work</div><div class="title">Sethi Jewellers</div></div><span>&rarr;</span></a>
 </main>
-
-<footer class="site-footer">
-  <span>Khanak Sethi</span>
-  <span>Built with care, 2026</span>
-</footer>
-
+<footer class="site-footer"><span>Khanak Sethi</span><span>Built with care, 2026</span></footer>
 </body>
 </html>
