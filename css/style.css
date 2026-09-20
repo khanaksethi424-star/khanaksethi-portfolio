@@ -228,3 +228,57 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink)}
 .shoes-case .cs-hero-image{background-color:#f0ece4}.nighthaven-case .cs-hero-image{background-position:center 58%}.cider-case .cs-hero-image{background-position:center}.pecmate-case .cs-hero-image{min-height:500px}
 @media(max-width:900px){.nav>.wrap{height:62px}.nav>.wrap ul{gap:18px}.cs-meta{grid-template-columns:1fr 1fr}.cs-hero-image{min-height:430px}.cs-split,.cs-feature-grid{grid-template-columns:1fr;gap:40px}.cs-process-grid,.cs-decision-grid{grid-template-columns:1fr 1fr}.cs-process-grid article:nth-child(2),.cs-decision-grid>div:nth-child(2){border-right:0}.cs-process-grid article:nth-child(3),.cs-process-grid article:nth-child(4),.cs-decision-grid>div:nth-child(3),.cs-decision-grid>div:nth-child(4){border-top:1px solid var(--line)}.cs-gallery{grid-template-columns:1fr 1fr}.cs-gallery .wide{grid-column:1/-1}.cs-flow{grid-template-columns:1fr 24px 1fr;gap:0}.cs-flow>div:nth-of-type(3),.cs-flow>i:nth-of-type(2){margin-top:20px}.cs-flow>div:nth-of-type(4){grid-column:3}.cs-flow>i:nth-of-type(3){grid-column:2;grid-row:3}.cs-flow>div:nth-of-type(2){grid-column:3}.cs-flow>i:nth-of-type(1){grid-column:2;grid-row:1}.cs-callout{grid-template-columns:1fr;gap:12px}}
 @media(max-width:600px){.nav>.wrap ul{display:none}.cs-back{padding-top:24px}.cs-header{padding-top:40px}.cs-header .one-liner{font-size:.88rem}.cs-meta{padding-bottom:28px;gap:18px}.cs-meta .value{font-size:.62rem}.cs-hero-image{min-height:350px}.cs-section{padding-top:76px;padding-bottom:76px}.cs-lead{padding-top:82px}.cs-section h2,.cs-lead h2,.cs-outcome h2{font-size:2.2rem}.cs-process-grid,.cs-decision-grid{grid-template-columns:1fr}.cs-process-grid article,.cs-process-grid article+article,.cs-decision-grid>div,.cs-decision-grid>div+div{border-right:0;border-bottom:1px solid var(--line);padding:22px 0}.cs-process-grid article:last-child,.cs-decision-grid>div:last-child{border-bottom:0}.cs-gallery{grid-template-columns:1fr;padding-bottom:76px}.cs-gallery .wide{grid-column:auto}.cs-callout{grid-template-columns:1fr}.cs-image-break{padding:0 var(--pad)}.cs-flow{display:block}.cs-flow>div,.cs-flow>div+div{padding:20px 0;border-bottom:1px solid var(--line)}.cs-flow>i{display:none}.cs-outcome{padding-bottom:80px}}
+
+/* PECmate evidence-led refinement */
+.pecmate-case{background:#f4f3ee}
+.pecmate-case .cs-header h1{font-weight:600;letter-spacing:-.045em}
+.pec-evidence-band{background:#e7ebe2;border-top:1px solid #d3d8cc;border-bottom:1px solid #d3d8cc}
+.pec-evidence-band .cs-section{padding-top:72px;padding-bottom:72px}
+.pec-research-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #bfc6b8;border-bottom:1px solid #bfc6b8;margin-top:10px}
+.pec-research-grid div{padding:28px 28px 30px 0;border-right:1px solid #bfc6b8}
+.pec-research-grid div+div{padding-left:28px}
+.pec-research-grid div:last-child{border-right:0}
+.pec-research-grid strong{display:block;font-size:1.6rem;letter-spacing:-.03em;font-weight:600;margin-bottom:7px}
+.pec-research-grid span{display:block;font-size:.67rem;line-height:1.5;color:#62675d}
+.pec-source-note{font-size:.58rem!important;color:#777b72!important;margin-top:18px!important;line-height:1.55!important}
+.pec-split{border-top:0;padding-top:25px}
+.pec-document{margin-top:52px;background:#ebe8df;overflow:hidden;border:1px solid #ded9cf}
+.pec-document img{display:block;width:100%;height:auto}
+.pec-manual{background:#ebe8df;max-width:none;padding-left:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));padding-right:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));border-top:1px solid #ddd8cd;border-bottom:1px solid #ddd8cd}
+.pec-manual>p{max-width:670px}
+.pec-logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:48px}
+.pec-logo-grid figure{margin:0;background:#fff;border:1px solid #dedbd3;aspect-ratio:1;overflow:hidden}
+.pec-logo-grid img{width:100%;height:100%;object-fit:cover}
+.pec-logo-refine{display:grid;grid-template-columns:.38fr 1fr;gap:40px;align-items:center;margin-top:54px;padding-top:32px;border-top:1px solid #d4d0c6}
+.pec-mini-label{display:block;font-size:.49rem;letter-spacing:.15em;text-transform:uppercase;color:#858078;margin-bottom:10px}
+.pec-logo-refine p{font-size:.68rem;line-height:1.7;color:#68645d;margin:0;max-width:30ch}
+.pec-variation-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.pec-variation-strip img{width:100%;aspect-ratio:1;object-fit:cover;background:#fff;border:1px solid #dedbd3}
+.pec-final-logo{margin-top:48px;padding:34px 0 0;border-top:1px solid #d4d0c6;display:flex;align-items:center;justify-content:space-between}
+.pec-final-logo img{width:150px;height:150px;object-fit:contain;background:#fff;border:1px solid #dedbd3}
+.pec-ui-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px;align-items:start}
+.pec-ui-grid figure{margin:0}
+.pec-ui-grid figure img{display:block;width:100%;height:auto;background:#fff;border-radius:16px;box-shadow:0 12px 32px rgba(25,29,20,.07)}
+.pec-ui-grid figcaption{font-size:.57rem;letter-spacing:.05em;color:#716c63;margin-top:11px}
+.pec-journey-section .pec-document{margin-top:45px}
+.pec-competitive .pec-document{margin-top:45px}
+.pecmate-case .cs-outcome{padding-top:100px}
+@media(max-width:900px){
+ .pec-research-grid{grid-template-columns:1fr}
+ .pec-research-grid div,.pec-research-grid div+div{border-right:0;border-bottom:1px solid #bfc6b8;padding:22px 0}
+ .pec-research-grid div:last-child{border-bottom:0}
+ .pec-logo-grid{grid-template-columns:repeat(3,1fr)}
+ .pec-logo-refine{grid-template-columns:1fr;gap:24px}
+ .pec-variation-strip{grid-template-columns:repeat(5,1fr)}
+ .pec-ui-grid{grid-template-columns:repeat(2,1fr)}
+ .pec-final-logo{align-items:flex-start}
+}
+@media(max-width:600px){
+ .pec-logo-grid{grid-template-columns:repeat(2,1fr)}
+ .pec-variation-strip{grid-template-columns:repeat(2,1fr)}
+ .pec-final-logo{display:block}
+ .pec-final-logo img{margin-top:18px}
+ .pec-ui-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .pec-ui-grid figure img{border-radius:11px}
+ .pec-document{margin-top:35px}
+}
